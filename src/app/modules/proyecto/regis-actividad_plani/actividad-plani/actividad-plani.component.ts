@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActividadPlaniService } from '../../services/actividad-plani.service';
 import { Actividad_plani } from 'src/app/models/Actividad_plani';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-actividad-plani',
@@ -12,16 +13,23 @@ export class ActividadPlaniComponent implements OnInit {
   actividadplanis: Actividad_plani = new Actividad_plani();
 
   constructor(
-    private actividadplaniService: ActividadPlaniService
+    private actividadplaniService: ActividadPlaniService,
+    private route: ActivatedRoute,
+    
   ) { }
 
   ngOnInit(): void {
-    this.actividadplaniService.listar().subscribe(data => {
-      this.actividadplani = data
-      console.log(data)
+    this.route.params.subscribe(params => {
+      const id = params['id'];
+      this.actividadplaniService.obtenerActividadesPorProyecto(id).subscribe(data => {
+        this.actividadplani = data;
+        console.log(data)
+       } );
+
     });
-    ;
   }
+
+  
   createTutorial() {
     this.actividadplaniService.crear(this.actividadplanis).subscribe(data => {
       console.log(data);

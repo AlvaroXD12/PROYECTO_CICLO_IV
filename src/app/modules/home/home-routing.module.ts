@@ -22,6 +22,7 @@ import { ListaestudiantesComponent } from '../asistencia/page/listaestudiantes/l
 import { IntegrantesComponent } from '../grupos/pages/integrantes/integrantes.component';
 import { InformefinalComponent } from '../informefinal/pages/informefinal/informefinal.component';
 import { AddinformefinalComponent } from '../informefinal/pages/addinformefinal/addinformefinal.component';
+import { VistaComponent } from '../aprobar-proyecto/vista/vista.component';
 
 
 const routes: Routes = [
@@ -47,12 +48,12 @@ const routes: Routes = [
     loadChildren: () => import('../proyecto/actividad-plani.module').then(m => m.ActividadPlaniModule)
   },
   {
-    path:'proyecto/registrar_actividadE',
+    path:'proyecto/registrar_actividadE/:id',
     component: ActividadEjecuComponent,
     loadChildren: () => import('../proyecto/actividad-ejecu.module').then(m => m.ActividadEjecuModule)
   },
   {
-    path:'proyecto/registrar_roles',
+    path:'proyecto/registrar_roles/:id',
     component: RegisRolesComponent,
     loadChildren: () => import('../proyecto/regis-roles.module').then(m => m.RegisRolesModule)
   },
@@ -92,14 +93,20 @@ const routes: Routes = [
     loadChildren: () => import('../aprobar-proyecto/aprobar-proyecto.module').then(m => m.AprobarProyectoModule)
   },
   {
+    path:'aprobar/comentar/comentario',
+    component: ComentarioComponent,
+    loadChildren: () => import('../aprobar-proyecto/comentario.module').then(m => m.ComentarioModule)
+  },
+  {
     path:'aprobar/comentar',
     component: ComentarComponent,
     loadChildren: () => import('../aprobar-proyecto/comentar.module').then(m => m.ComentarModule)
   },
+  
   {
-    path:'aprobar/comentar/comentario',
-    component: ComentarioComponent,
-    loadChildren: () => import('../aprobar-proyecto/comentario.module').then(m => m.ComentarioModule)
+    path:'aprobar/vista',
+    component: VistaComponent,
+    loadChildren: () => import('../aprobar-proyecto/vista.module').then(m => m.VistaModule)
   },
  
   {

@@ -33,8 +33,8 @@ export class ActividadPlaniService {
     this.http.get(this.url + '/' + id);
   }
 
-  ActividadPorProyecto(proyecto: number): Observable<Actividad_plani> {
-    return this.http.get<Actividad_plani>(this.url + '/actividadesPorProyecto/'+ proyecto);
-  } 
+  obtenerActividadesPorProyecto(id: number): Observable<Actividad_plani[]> {
+    return this.http.get<Actividad_plani[]>(this.url +'/'+  id + '/actividades');
+  }
   
 }

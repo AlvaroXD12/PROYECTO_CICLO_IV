@@ -43,27 +43,84 @@
             <thead>
                 <th class="id">N°</th>
                 <th class="nombre_afiliacion">Nombre de afiliación</th>
-                <th class="tipo_afiliacion">Tipo de proyecto</th>
-                <th class="fecha_inicio">Nro de acuerdo</th>
+                <th class="tipo_proyecto">Tipo de proyecto</th>
+                <th class="nro_acuerdo">Nro de acuerdo</th>
                 <th class="estado">Estado</th>
-                <th colspan="3" class="accion">Acción</th>
+                <th class="accion">Acción</th>
             </thead>
             <tbody>
-                <tr th:each="convenio:${convenios}">
-                    <td scope="row" th:text="${convenio.id_co}"></td>
-                    <td th:text="${convenio.nombre_conv}"></td>
-                    <td th:text="${convenio.fecha_inicio}"></td>
-                    <td th:text="${convenio.fecha_fin}"></td>
-                    <td th:text="${convenio.estado}"></td>
+                <tr th:each="contenido">
+                    <td th:text="id">01</td>
+                    <td th:text="nombre_afiliacion">Afiliacion01</td>
+                    <td th:text="tipo_proyecto">ProyectoTipo01</td>
+                    <td th:text="nro_acuerdo">20231015</td>
+                    <td th:text="estado"><img class="estadoimg" src="../assets/pictures/Enproceso.png"></td>
                     <td class="accion">
-                        <span [routerLink]="['/home/aprobar/vista']" class="material-symbols-outlined" >visibility</span>
+                        <span routerLink="/home/aprobar/vista" class="material-symbols-outlined" >visibility</span>
+                        <span routerLink="/home/aprobar/comentar" class="material-symbols-outlined" >chat</span>
+                    </td>
+                </tr>
 
-                        <span [routerLink]="['/home/aprobar/comentar']" class="material-symbols-outlined" >chat</span>
+                <tr th:each="contenido">
+                    <td th:text="id">02</td>
+                    <td th:text="nombre_afiliacion">Afiliacion02</td>
+                    <td th:text="tipo_proyecto">ProyectoTipo02</td>
+                    <td th:text="nro_acuerdo">20231542</td>
+                    <td th:text="estado"><img class="estadoimg" src="../assets/pictures/validadofond.png"></td>
+                    <td class="accion">
+                        <span routerLink="/home/aprobar/vista" class="material-symbols-outlined" >visibility</span>
+                        <span routerLink="/home/aprobar/comentar" class="material-symbols-outlined" >chat</span>
+                    </td>
+                </tr>
+
+                <tr th:each="contenido">
+                    <td th:text="id">03</td>
+                    <td th:text="nombre_afiliacion">Afiliacion03</td>
+                    <td th:text="tipo_proyecto">ProyectoTipo03</td>
+                    <td th:text="nro_acuerdo">20237854</td>
+                    <td th:text="estado"><img class="estadoimg" src="../assets/pictures/validadofond.png"></td>
+                    <td class="accion">
+                        <span routerLink="/home/aprobar/vista" class="material-symbols-outlined" >visibility</span>
+                        <span routerLink="/home/aprobar/comentar" class="material-symbols-outlined" >chat</span>
+                    </td>
+                </tr>
+
+                <tr th:each="contenido">
+                    <td th:text="id">04</td>
+                    <td th:text="nombre_afiliacion">Afiliacion04</td>
+                    <td th:text="tipo_proyecto">ProyectoTipo04</td>
+                    <td th:text="nro_acuerdo">20239562</td>
+                    <td th:text="estado"><img class="estadoimg" src="../assets/pictures/validadofond.png"></td>
+                    <td class="accion">
+                        <span routerLink="/home/aprobar/vista" class="material-symbols-outlined" >visibility</span>
+                        <span routerLink="/home/aprobar/comentar" class="material-symbols-outlined" >chat</span>
+                    </td>
+                </tr>
+
+                <tr th:each="contenido">
+                    <td th:text="id">05</td>
+                    <td th:text="nombre_afiliacion">Afiliacion05</td>
+                    <td th:text="tipo_proyecto">ProyectoTipo05</td>
+                    <td th:text="nro_acuerdo">20233625</td>
+                    <td th:text="estado"><img class="estadoimg" src="../assets/pictures/validadofond.png"></td>
+                    <td class="accion">
+                        <span routerLink="/home/aprobar/vista" class="material-symbols-outlined" >visibility</span>
+                        <span routerLink="/home/aprobar/comentar" class="material-symbols-outlined" >chat</span>
+                    </td>
+                </tr>
+
+                <tr th:each="contenido">
+                    <td th:text="id">06</td>
+                    <td th:text="nombre_afiliacion">Afiliacion06</td>
+                    <td th:text="tipo_proyecto">ProyectoTipo06</td>
+                    <td th:text="nro_acuerdo">20235642</td>
+                    <td th:text="estado"><img class="estadoimg" src="../assets/pictures/validadofond.png"></td>
+                    <td class="accion">
+                        <span routerLink="/home/aprobar/vista" class="material-symbols-outlined" >visibility</span>
+                        <span routerLink="/home/aprobar/comentar" class="material-symbols-outlined" >chat</span>
                     </td>
                 </tr>
             </tbody>
-
-
             </table>
     </div>
 </div>

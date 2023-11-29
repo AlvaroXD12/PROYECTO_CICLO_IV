@@ -32,5 +32,7 @@ export class ActividadEjecuService {
   IDactividadejecu(id: Actividad_ejecu) {
     this.http.get(this.url + '/' + id);
   }
-  
+  obtenerActividadesPorProyecto(id: number): Observable<Actividad_ejecu[]> {
+    return this.http.get<Actividad_ejecu[]>(this.url +'/'+  id + '/actividades');
+  }
 }

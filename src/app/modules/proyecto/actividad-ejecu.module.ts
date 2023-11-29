@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { ActividadEjecuComponent } from './regis-actividad_ejecu/actividad-ejecu/actividad-ejecu.component';
 import { ActividadEjecuRoutingModule } from './actividad-ejecu-routing.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -13,7 +14,8 @@ import { ActividadEjecuRoutingModule } from './actividad-ejecu-routing.module';
   imports: [
     CommonModule,
     ActividadEjecuRoutingModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ]
 })
 export class ActividadEjecuModule { }

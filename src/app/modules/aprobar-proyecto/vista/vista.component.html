@@ -3,7 +3,7 @@
         <div class="encabezado">
             <a href="/home/aprobar">
             <img src="/assets/pictures/regresar.png" class="regresar"></a>
-            <h1 class="titulo">Resporte de Proyectos</h1>
+            <h1 class="titulo">Reporte de Proyectos</h1>
 
         </div>
         <div class="filtros-container">
@@ -42,27 +42,107 @@
         <table class="tabla">
             <thead>
                 <th class="id">N°</th>
-                <th class="nombre_afiliacion">Proyecto</th>
-                <th class="tipo_afiliacion">Participantes Estudiantes</th>
-                <th class="fecha_inicio">Participantes Satisfaccion</th>
-                <th class="estado">Participantes Docente</th>
-                <th class="tipo_afiliacion">Cantidad de beneficiarios   </th>
-                <th class="tipo_afiliacion">Satisfaccion Beneficiario</th>
+                <th class="proyecto">Proyecto</th>
+                <th class="participantes_estudiantes">Participantes Estudiantes</th>
+                <th class="participantes_satisfaccion">Participantes Satisfaccion</th>
+                <th class="participantes_docentes">Participantes Docente</th>
+                <th class="cantidad_beneficiarios">Cantidad de beneficiarios   </th>
+                <th class="satifaccion_beneficiario">Satisfaccion Beneficiario</th>
                 <th colspan="3" class="accion">Acción</th>
-
             </thead>
-            <tbody>
-                <tr th:each="convenio:${convenios}">
-                    <td scope="row" th:text="${convenio.id_co}"></td>
-                    <td th:text="${convenio.nombre_conv}"></td>
-                    <td th:text="${convenio.fecha_inicio}"></td>
-                    <td th:text="${convenio.fecha_fin}"></td>
-                    <td th:text="${convenio.estado}"></td>
 
+            <tbody>
+                <tr th:each="reporte-proyecto">
+                    <td th:text="id">01</td>
+                    <td th:text="proyecto">proyecto01</td>
+                    <td th:text="participantes_estudiantes">30</td>
+                    <td th:text="participantes_satisfaccion">30</td>
+                    <td th:text="participantes_docentes">5</td>
+                    <td th:text="cantidad_beneficiarios">25</td>
+                    <td th:text="satifaccion_beneficiario">25</td>
                     <td class="accion">
-                        <span routerLink="/home/aprobar/vista" class="material-symbols-outlined" >visibility</span>
+                        <span routerLink="/home/aprobar/vista"><img src="../assets/pictures/descargar.png" width="25px"></span>
                     </td>
                 </tr>
+
+                <tr th:each="reporte-proyecto">
+                    <td th:text="id">02</td>
+                    <td th:text="proyecto">proyecto02</td>
+                    <td th:text="participantes_estudiantes">30</td>
+                    <td th:text="participantes_satisfaccion">30</td>
+                    <td th:text="participantes_docentes">5</td>
+                    <td th:text="cantidad_beneficiarios">25</td>
+                    <td th:text="satifaccion_beneficiario">25</td>
+                    <td class="accion">
+                        <span routerLink="/home/aprobar/vista"><img src="../assets/pictures/descargar.png" width="25px"></span>
+                    </td>
+                </tr>
+
+                <tr th:each="reporte-proyecto">
+                    <td th:text="id">03</td>
+                    <td th:text="proyecto">proyecto03</td>
+                    <td th:text="participantes_estudiantes">30</td>
+                    <td th:text="participantes_satisfaccion">30</td>
+                    <td th:text="participantes_docentes">5</td>
+                    <td th:text="cantidad_beneficiarios">25</td>
+                    <td th:text="satifaccion_beneficiario">25</td>
+                    <td class="accion">
+                        <span routerLink="/home/aprobar/vista"><img src="../assets/pictures/descargar.png" width="25px"></span>
+                    </td>
+                </tr>
+
+                <tr th:each="reporte-proyecto">
+                    <td th:text="id">04</td>
+                    <td th:text="proyecto">proyecto04</td>
+                    <td th:text="participantes_estudiantes">30</td>
+                    <td th:text="participantes_satisfaccion">30</td>
+                    <td th:text="participantes_docentes">5</td>
+                    <td th:text="cantidad_beneficiarios">25</td>
+                    <td th:text="satifaccion_beneficiario">25</td>
+                    <td class="accion">
+                        <span routerLink="/home/aprobar/vista"><img src="../assets/pictures/descargar.png" width="25px"></span>
+                    </td>
+                </tr>
+
+                <tr th:each="reporte-proyecto">
+                    <td th:text="id">05</td>
+                    <td th:text="proyecto">proyecto05</td>
+                    <td th:text="participantes_estudiantes">30</td>
+                    <td th:text="participantes_satisfaccion">30</td>
+                    <td th:text="participantes_docentes">5</td>
+                    <td th:text="cantidad_beneficiarios">25</td>
+                    <td th:text="satifaccion_beneficiario">25</td>
+                    <td class="accion">
+                        <span routerLink="/home/aprobar/vista"><img src="../assets/pictures/descargar.png" width="25px"></span>
+                    </td>
+                </tr>
+
+                <tr th:each="reporte-proyecto">
+                    <td th:text="id">06</td>
+                    <td th:text="proyecto">proyecto06</td>
+                    <td th:text="participantes_estudiantes">30</td>
+                    <td th:text="participantes_satisfaccion">30</td>
+                    <td th:text="participantes_docentes">5</td>
+                    <td th:text="cantidad_beneficiarios">25</td>
+                    <td th:text="satifaccion_beneficiario">25</td>
+                    <td class="accion">
+                        <span routerLink="/home/aprobar/vista"><img src="../assets/pictures/descargar.png" width="25px"></span>
+                    </td>
+                </tr>
+
+                <tr th:each="reporte-proyecto">
+                    <td th:text="id">07</td>
+                    <td th:text="proyecto">proyecto07</td>
+                    <td th:text="participantes_estudiantes">30</td>
+                    <td th:text="participantes_satisfaccion">30</td>
+                    <td th:text="participantes_docentes">5</td>
+                    <td th:text="cantidad_beneficiarios">25</td>
+                    <td th:text="satifaccion_beneficiario">25</td>
+                    <td class="accion">
+                        <span routerLink="/home/aprobar/vista"><img src="../assets/pictures/descargar.png" width="25px"></span>
+                    </td>
+                </tr>
+
             </tbody>
 
 

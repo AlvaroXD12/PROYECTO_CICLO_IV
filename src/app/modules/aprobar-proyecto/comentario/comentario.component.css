@@ -1,7 +1,12 @@
+.imagen > img {
+  width: 120px;
+}
+
 .borde-contenedor{
   border-radius: 4px;
 border: 4px solid #F7A800;
 background: #D8D8D3;
+padding-bottom: 10px;
 }
 
 .encabezado {
@@ -12,6 +17,9 @@ background: #D8D8D3;
 
 h1 {
   margin: 0 auto 0 300px;
+  font-family: 'Bungee Spice';
+  font-weight: bold;
+  color: #8F0000;
 }
 
 .salir {
@@ -55,7 +63,7 @@ h1 {
 .eliminar {
   position: absolute;
   top: 0px;
-  right: 22px;
+  right: 37px;
   width: 20px;
 height: 20px;
 flex-shrink: 0;
@@ -63,8 +71,9 @@ fill: #000;
 }
 
 .botones {
+  gap: 5px;
+  display: grid;
   justify-content: center; 
-  display: block;
   text-align: center;/* Centrar horizontalmente */
 }
 
@@ -103,22 +112,25 @@ fill: #000;
 
 
  .descripcion {
+  resize: none;
+  padding: 10px;
+  width: 383px;
   background: white;
-  height: 280px;
+  height: 265px;
   border-radius: 23px;
-border: 6px solid #F7A800;
-background: #FFF;
+ border: 6px solid #F7A800;
+ background: #FFF;
  }
  .guardar {
   display: block;
-  margin: 0 auto; 
+  margin: -10px auto; 
   text-align: center;
-  background-color: #F7A800; /* Cambia el color de fondo a azul */
-  color: #014277; /* Cambia el color del texto a blanco */
-  padding: 10px 20px; /* Ajusta el relleno según tus necesidades */
-  border: none; /* Elimina el borde del botón */
-  border-radius: 5px; /* Añade esquinas redondeadas */
-  cursor: pointer; /* Cambia el cursor al pasar el ratón por encima */
-  font-size: 16px; /* Ajusta el tamaño de fuente según tus necesidades */
+  background-color: #F7A800;
+  color: #014277;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
   margin-bottom: 3px;
  }

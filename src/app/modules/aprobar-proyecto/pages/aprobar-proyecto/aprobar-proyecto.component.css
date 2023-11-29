@@ -55,6 +55,8 @@ grid-template-rows: repeat(4, auto);
 }
 .texto_buscar {
     padding:35px;
+    font-family: Comic Neue;
+    font-weight: bold;
 }
 .buscar {
     background: white;
@@ -97,7 +99,11 @@ td {
 }
 .material-symbols-outlined {
     margin-right: 5px;
+    cursor: pointer;
 }
-
+.estadoimg{
+    width: 20px;
+    cursor: pointer;
+}
  
 

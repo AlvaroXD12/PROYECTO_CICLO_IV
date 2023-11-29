@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Roles } from 'src/app/models/Roles';
 import { RegisRolesService } from '../../services/regis-roles.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-regis-roles',
@@ -11,14 +12,18 @@ export class RegisRolesComponent implements OnInit {
   roles: Roles[] = [];
 
   constructor(
-    private regisrolesService: RegisRolesService
+    private regisrolesService: RegisRolesService,
+    private route: ActivatedRoute,
   ) { }
 
   ngOnInit(): void {
-    this.regisrolesService.listar().subscribe(data => {
-      this.roles = data
-      console.log(data)
+    this.route.params.subscribe(params => {
+      const id = params['id'];
+      this.regisrolesService.obtenerRolesPorProyecto(id).subscribe(data => {
+        this.roles = data;
+        console.log(data)
+       } );
+
     });
-    ;
   }
 }

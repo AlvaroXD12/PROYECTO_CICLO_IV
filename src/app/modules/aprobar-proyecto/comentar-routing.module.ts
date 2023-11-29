@@ -5,7 +5,8 @@ import { ComentarComponent } from './comentar/comentar.component';
 
 const routes: Routes = [
 
-  {path:'', component:ComentarComponent, outlet:'child'},
+  {path:'',
+   component:ComentarComponent, outlet:'child'},
 
 ];
 

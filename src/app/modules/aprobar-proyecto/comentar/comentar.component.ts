@@ -15,7 +15,7 @@ export class ComentarComponent {
   constructor(private matDialog:MatDialog){}
   openDialog(){
     this.matDialog.open(ComentarioComponent,{
-      width: '550px',
+      width: '650px',
     })
   }
 

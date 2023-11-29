@@ -53,10 +53,10 @@
                     <td class="acción">
                         <a [routerLink]="['/home/proyecto/registrar_actividadP', proyecto.id]"><img
                                 src="/assets/pictures/examen1.png" class="descargar"></a>
-                        <a [routerLink]="['/home/proyecto/registrar_actividadE']"><img
+                        <a [routerLink]="['/home/proyecto/registrar_actividadE', proyecto.id]"><img
                                 src="/assets/pictures/ejecucion1.png" class="descargar"></a>
-                        <a [routerLink]="['/home/proyecto/registrar_roles']"><img src="/assets/pictures/tuerca.png"
-                                class="descargar"></a>
+                        <a [routerLink]="['/home/proyecto/registrar_roles', proyecto.id]"><img 
+                            src="/assets/pictures/tuerca.png" class="descargar"></a>
                         <a [routerLink]="['/home/proyecto/editar', proyecto.id]"><img src="/assets/pictures/editar1.png"
                                 class="descargar"></a>
                         <a><img src="/assets/pictures/comentar.png" class="descargar"></a>

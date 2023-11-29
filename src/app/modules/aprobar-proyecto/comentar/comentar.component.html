@@ -16,14 +16,43 @@
                 <th class="estado">Estado</th>
             </thead>
             <tbody>
-                <tr th:each="convenio:${aprobar}">
+                <tr th:each="aprobar">
                     <td class="id">01</td>
                     <td class="nombre_afiliacion">Director de Mision</td>
-                    <td class="fecha">18/10/2023</td>
+                    <td class="fecha">23/04/2023</td>
                     <th class="comentario"><button mat-raised-button color="primary" (click)="openDialog()" class="coment">comentario</button></th>
-                    <td class="estado">En proceso </td>
+                    <td class="estado"><img class="estadoimg" src="../assets/pictures/Enproceso.png"></td>
+                </tr>
+                <tr th:each="aprobar">
+                    <td class="id">02</td>
+                    <td class="nombre_afiliacion">Tesoreria</td>
+                    <td class="fecha">23/04/2023</td>
+                    <th class="comentario"><button mat-raised-button color="primary" (click)="openDialog()" class="coment">comentario</button></th>
+                    <td class="estado"><img class="estadoimg" src="../assets/pictures/validadofond.png"></td>
+                </tr>
+                <tr th:each="aprobar">
+                    <td class="id">03</td>
+                    <td class="nombre_afiliacion">Consejo de Escuela</td>
+                    <td class="fecha">23/04/2023</td>
+                    <th class="comentario"><button mat-raised-button color="primary" (click)="openDialog()" class="coment">comentario</button></th>
+                    <td class="estado"><img class="estadoimg" src="../assets/pictures/validadofond.png"></td>
+                </tr>
+                <tr th:each="aprobar">
+                    <td class="id">04</td>
+                    <td class="nombre_afiliacion">Consejo de Facultad</td>
+                    <td class="fecha">23/04/2023</td>
+                    <th class="comentario"><button mat-raised-button color="primary" (click)="openDialog()" class="coment">comentario</button></th>
+                    <td class="estado"><img class="estadoimg" src="../assets/pictures/validadofond.png"></td>
+                </tr>
+                <tr th:each="aprobar">
+                    <td class="id">05</td>
+                    <td class="nombre_afiliacion">Consejo Universitario</td>
+                    <td class="fecha">23/04/2023</td>
+                    <th class="comentario"><button mat-raised-button color="primary" (click)="openDialog()" class="coment">comentario</button></th>
+                    <td class="estado"><img class="estadoimg" src="../assets/pictures/Enproceso.png"></td>
                 </tr>
             </tbody>
+            
             </table>
             
             <div class="atributos-container">

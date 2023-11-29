@@ -16,41 +16,44 @@
                             <p>AGREGAR ACTIVIDAD</p>
                         </div>
                     </div>
-                    <div class="espacio">
-                        <label class="datos">Nombre de la Actividad:</label>
-                        <input type="text" class="form-control" />
-                    </div>
-                    <div class="espacio">
-                        <div class="contener_fechas">
-                            <label class="fecha_inicio1">Fecha inicio:</label>
-                            <input type="date" class="fecha">
+                    <form (ngSubmit)="onSubmit()">
+                        <div class="espacio">
+                            <label class="datos">Nombre de la Actividad:</label>
+                            <input type="text" id="nombre_actividad" [(ngModel)]="actividadejecuc.nombre_actividad"
+                                name="nombre_actividad" class="form-control" />
                         </div>
-                        <div class="proyect_tipo">
-                            <label class="fecha_fin">Fecha fin:</label>
-                            <input type="date" class="fecha">
+                        <div class="espacio">
+                            <div class="contener_fechas">
+                                <label class="fecha_inicio1">Fecha inicio:</label>
+                                <input type="date" id="fecha_inicio" [(ngModel)]="actividadejecuc.fecha_inicio"
+                                    name="fecha_inicio" class="fecha" />
+                            </div>
+                            <div class="proyect_tipo">
+                                <label class="fecha_fin">Fecha fin:</label>
+                                <input type="date" id="fecha_fin" [(ngModel)]="actividadejecuc.fecha_fin"
+                                    name="fecha_fin" class="fecha" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="espacio">
-                        <label class="texto_buscar">Tipo de proyecto:</label>
-                        <select class="caja_buscar">
-                            <option>-------</option>
-                            <option>Proyecto</option>
-                            <option>Programa</option>
-                            <option>Voluntariado</option>
-
-                        </select>
-                    </div>
-                    <div class="espacio">
-                        <div>
-                        <label class="datos2">Descripción:</label>
-                    </div>
-                        <input type="text" class="form-control1" />
-                    </div>
-                    <div class="boton_crear1">
-                        <a href="/home/proyecto" class="crear1">
-                            <p>GUARDAR</p>
-                        </a>
-                    </div>
+                        <div class="espacio">
+                            <label class="texto_buscar">Tipo de Actividad:</label>
+                            <select class="tipo_doc" id="parametros" [(ngModel)]="actividadejecuc.parametros"
+                                name="parametros">
+                                <option *ngFor="let par of parametros" [ngValue]="par">{{par.valor}}</option>
+                            </select>
+                        </div>
+                        <div class="espacio">
+                            <div>
+                                <label class="datos2">Descripción:</label>
+                            </div>
+                            <input type="text" id="descripcion" [(ngModel)]="actividadejecuc.descripcion"
+                                name="descripcion" class="form-control1" />
+                        </div>
+                        <button class="boton_crear1">
+                            <a class="crear1">
+                                <p>GUARDAR</p>
+                            </a>
+                        </button>
+                    </form>
                 </div>
             </div>
             <div class="linea_separa"></div>
@@ -77,7 +80,8 @@
                             <td class="acción">
                                 <a><img src="/assets/pictures/ver1.png" class="descargar"></a>
                                 <a><img src="/assets/pictures/editar1.png" class="descargar"></a>
-                                <a><img src="/assets/pictures/borrar.png" class="descargar"></a>
+                                <a><img src="/assets/pictures/borrar.png" class="descargar"
+                                        (click)="actividad_ejecu.id && Eliminar(actividad_ejecu.id)"></a>
                             </td>
                         </tr>
                     </tbody>

@@ -32,4 +32,7 @@ export class RegisRolesService {
   IDroles(id: Roles) {
     this.http.get(this.url + '/' + id);
   }
+  obtenerRolesPorProyecto(id: number): Observable<Roles[]> {
+    return this.http.get<Roles[]>(this.url +'/'+  id + '/Roles');
+  }
 }

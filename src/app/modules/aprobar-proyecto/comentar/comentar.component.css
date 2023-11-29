@@ -42,10 +42,8 @@
     border-style: solid ;
     border-color: #F7A800;
     background: rgba(169, 169, 169, 0.16);;
-
     width: 1200px;
     margin: 10px auto;
-
     color: white;
     border-collapse: collapse;
     
@@ -66,25 +64,27 @@ td {
 /* PARA EL NUMERO DE ACUERDO Y ESTADO */
 .atributos-container {
     text-align: center;
-    width: 92%; /* Ajustado para que no sea más ancho que el ancho del viewport */
+    width: 82%; /* Ajustado para que no sea más ancho que el ancho del viewport */
     margin: auto;
     padding: 4px; /* Añadido espacio alrededor del contenedor */
     position: relative;
-    top:360px;
+    top:150px;
 }
 
 .formulario {
-    padding-top: 4px;
+    padding-top: 4px
 }
 .text1 {
     position: relative;
     left: 26%; /* Utilizando un valor relativo para el desplazamiento */
-    font-family: 'Squada One';
-    color: red;
+    font-family: Comic Neue;
+    color: #8F0000;
+    font-size: 20px;
+    font-weight: bold;
 }
 .form1 {
     background: white;
-    border: 3px solid #014277; /* Corrección de la propiedad border */
+    border: 4px solid #014277; /* Corrección de la propiedad border */
     border-radius: 5px;
     position: relative;
     left: 26%; /* Utilizando un valor relativo para el desplazamiento */
@@ -93,14 +93,16 @@ td {
 .text2 {
     position: relative;
     left: 31%; /* Utilizando un valor relativo para el desplazamiento */
-    font-family: 'Squada One';
-    color: red;
+    font-family: Comic Neue;
+    color: #073564;
+    font-size: 20px;
+    font-weight: bold;
 }
 .form2 {
     padding: 6px;
     position: relative;
     left: 31%; /* Utilizando un valor relativo para el desplazamiento */
-    border: 3px solid #F7A800; /* Corrección de la propiedad border */
+    border: 4px solid #F7A800; /* Corrección de la propiedad border */
     border-radius: 5px;
 }
 
@@ -120,4 +122,9 @@ td {
 
   .id {
     text-align: center;
+  }
+
+  .estadoimg {
+    cursor: pointer;
+    width: 20px;
   }
