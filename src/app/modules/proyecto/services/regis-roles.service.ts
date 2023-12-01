@@ -17,20 +17,20 @@ export class RegisRolesService {
     return this.http.get<Roles[]>(this.url + '/all');
   }
 
-  crear(roles: Roles){
-    return this.http.post<string>(this.url +'/add' , roles);
+  crear(roles: Roles): Observable<Object>{
+    return this.http.post<Roles>(this.url +'/add' , roles);
   }
 
-  editar(roles: Roles) {
-    return this.http.put(this.url, roles);
+  editar(id: number, roles: Roles) : Observable<Object>{
+    return this.http.put(this.url + '/edit/' + id, roles);
   }
   
   eliminar(id: number): Observable<any> {
     return this.http.delete(this.url + '/delete/' + id);
   }
 
-  IDroles(id: Roles) {
-    this.http.get(this.url + '/' + id);
+  IDroles(id: number): Observable<any> {
+    return this.http.get<Roles>(this.url + '/' + id);
   }
   obtenerRolesPorProyecto(id: number): Observable<Roles[]> {
     return this.http.get<Roles[]>(this.url +'/'+  id + '/Roles');

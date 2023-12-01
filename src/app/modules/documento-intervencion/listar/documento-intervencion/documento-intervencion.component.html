@@ -15,26 +15,20 @@
             </a>
         </div>
         <div class="buscar">
-            <label class="texto_buscar">Tipo de proyecto:</label>
-            <select>
-                <option>UBIGEO</option>
-                <option>Departamento1</option>
-                <option>Departamento2</option>
-                <option>Departamento3</option>
+            <label class="texto_buscar">Tipo de documento: </label>
+            <select class="caja_buscar" [(ngModel)]="documento.parametros" >
+                <option>Marco</option>
+                <option>Especifico</option>
             </select>
+
             <label class="texto_buscar">Estado:</label>
-            <select class="buscar_estado">
-                <option>ESTADO</option>
-                <option>Departamento1</option>
-                <option>Departamento2</option>
-                <option>Departamento3</option>
+            <select class="caja_buscar" [(ngModel)]="documento.estado" (change)="filtro2()">
+                <option>Activo</option>
+                <option>Inactivo</option>
             </select>
             <label class="texto_buscar">Provincia:</label>
-            <select>
-                <option>UBIGEO</option>
-                <option>Departamento1</option>
-                <option>Departamento2</option>
-                <option>Departamento3</option>
+            <select class="caja_buscar" [(ngModel)]="documento.ubigeo" (change)="filtro3($event)">
+                <option *ngFor="let ubigeo of ubigeo" [ngValue]="ubigeo.id">{{ubigeo.departamento}}</option>
             </select>
         </div>
     </div>
@@ -61,10 +55,9 @@
                     <td class="estado">{{documento.estado}}</td>
                     <td class="acción">
                         <img src="/assets/pictures/borrar.png" class="borrar"
-                            (click)="documento.id && Eliminar(documento.id)">
+                            (click)="documento.id && abrirModalEliminar(documento.id)">
                         <img src="/assets/pictures/editar.png" class="editar"
                             [routerLink]="['/home/documento_intervencion/edit', documento.id]">
-                        <img src="/assets/pictures/descargar.png" class="descargar">
                     </td>
                 </tr>
             </tbody>

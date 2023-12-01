@@ -16,6 +16,7 @@ import { Parametros } from 'src/app/models/Parametros';
 import { ParametrosService } from '../../services/parametros.service';
 import { Ciclo } from 'src/app/models/Ciclo';
 import { CicloService } from '../../services/ciclo.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-proyecto-registrar',
@@ -52,7 +53,7 @@ export class ProyectoRegistrarComponent implements OnInit {
     this.ListarCiclo()
   }
   onSubmit() {
-    this.createTutorial();
+    this.guardarProyecto();
   }
   ListarCoordinador() {
     this.coordinadorService.listar().subscribe(data => {
@@ -80,8 +81,9 @@ export class ProyectoRegistrarComponent implements OnInit {
     });
   }
   ListarParametros() {
+    
     this.parametrosService.listar().subscribe(data => {
-      this.parametros = data;  
+      this.parametros = data.filter(parametro => parametro.id === 8 || parametro.id === 9); 
     });
   }
   ListarCiclo() {
@@ -93,10 +95,63 @@ export class ProyectoRegistrarComponent implements OnInit {
     this.proyectoService.crear(this.proyecto).subscribe(data => {
       console.log(data);
       this.irProyecto();
+      this.showModal();
     });
   }
   irProyecto(){
     this.router.navigate(["/home/proyecto"]);
+  }
+  showModal(){
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Guardado exitosamente",
+      showConfirmButton: false,
+      timer: 1500,
+      customClass: {
+        popup: 'my-popup-class',
+      }
+    });
+    
+  }
+  datosIngresados(): boolean {
+    if (
+      this.proyecto &&
+      this.proyecto.nombre_proyecto !== undefined &&
+      this.proyecto.coordinador !== undefined &&
+      this.proyecto.tip_proyec !== undefined &&
+      this.proyecto.modalidad !== undefined &&
+      this.proyecto.documento !== undefined &&
+      this.proyecto.beneficiarios !== undefined &&
+      this.proyecto.objetivos !== undefined &&
+      this.proyecto.descripcion !== undefined &&
+      this.proyecto.fecha_ini !== undefined &&
+      this.proyecto.fecha_fin !== undefined &&
+      this.proyecto.presupuesto !== undefined &&
+      this.proyecto.escu_prof !== undefined &&
+      this.proyecto.parametros !== undefined &&
+      this.proyecto.ciclo !== undefined 
+    ) {
+      return true;
+    }
+    return false;
+  }
+  
+  
+  guardarProyecto() {
+    if (this.datosIngresados()) {
+      this.createTutorial()
+    } else {
+      this.mostrarError();
+    }
+  }
+  mostrarError() {
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: "Ingrese todos los datos necesarios",
+      footer:'<a href="home/proyecto/registrar"></a>'
+    });
   }
 
 }

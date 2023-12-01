@@ -13,8 +13,10 @@ export class ComentarioComponent implements OnInit{
   constructor() { }
 
   ngOnInit(): void {
+  
   }
 
+  
   toggleTab() {
     this.showTab = !this.showTab;
   }

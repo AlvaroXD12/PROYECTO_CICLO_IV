@@ -7,6 +7,11 @@
     border: 6px solid #F7A800;
     background: rgba(255, 255, 255, 0.90);
 }
+.my-popup-class {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
 .regresar {
     display: flex;

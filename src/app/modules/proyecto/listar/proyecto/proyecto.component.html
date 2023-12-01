@@ -16,7 +16,7 @@
         </div>
         <div class="buscar">
             <label class="texto_buscar">Tipo de proyecto:</label>
-            <select class="caja_buscar" id="tip_proyec" name="tip_proyec">
+            <select class="caja_buscar" id="tip_proyec" name="tip_proyec" [(ngModel)]="proyecto.tip_proyec" >
                 <option *ngFor="let tip_proyec of tipproyec">{{tip_proyec.nombre_tipro}}</option>
             </select>
             <label class="texto_buscar">Modalidad:</label>

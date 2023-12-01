@@ -25,6 +25,6 @@ export class Proyecto {
     modalidad?: Modalidad
     tip_proyec?: Tip_proyec;
     nacuerdo?:number;
-    proyecto?: Proyecto;
+    proyecto?:Proyecto;
     
 }

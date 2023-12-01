@@ -110,7 +110,15 @@ border-radius: 3px;
     margin-bottom: 3px;
 }
 .datos {
-    margin-left: 15px;
+    margin-left: 90px;
+    font-family: Comic Neue;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+.datos3 {
+    margin-left: 110px;
     font-family: Comic Neue;
     font-size: 15px;
     font-style: normal;

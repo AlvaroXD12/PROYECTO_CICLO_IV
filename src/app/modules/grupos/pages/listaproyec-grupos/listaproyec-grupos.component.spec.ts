@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ListaproyecGruposComponent } from './listaproyec-grupos.component';
+import { ListaproyecGruposComponent } from './ListaproyecGruposComponent';
 
 describe('ListaproyecGruposComponent', () => {
   let component: ListaproyecGruposComponent;

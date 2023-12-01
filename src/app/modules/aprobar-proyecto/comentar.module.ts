@@ -14,9 +14,7 @@ import { RouterModule } from '@angular/router';
 
 
 @NgModule({
-  declarations: [
-    ComentarComponent
-  ],
+  declarations: [ComentarComponent],
 
   imports: [
     CommonModule,
@@ -27,7 +25,7 @@ import { RouterModule } from '@angular/router';
     MatInputModule,
     FormsModule,
     MatDialogModule,
-    RouterModule
+    RouterModule,
   ]
 })
 export class ComentarModule {

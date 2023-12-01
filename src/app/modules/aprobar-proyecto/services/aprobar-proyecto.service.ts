@@ -27,8 +27,11 @@ export class AprobarProyectoService {
     return this.http.delete(this.url + '/delete/' + id);
   }
 
-  IDaprobacion(id: aprobacion) {
-    this.http.get(this.url + '/' + id);
-  }
+  IDaprobacion(id: number) {
+    this.http.get(this.url + '/' + id);
+  }
+obtenerActividadesPorProyecto(id: number): Observable<aprobacion[]> {
+  return this.http.get<aprobacion[]>(this.url +'/'+  id + '/aprobacion');
+}
 }
 

@@ -1,5 +1,5 @@
+import { Informefinal } from './../../../../models/informefinal';
 
-import { Proyecto } from 'src/app/models/Proyecto';
 import { InformefinalService } from './../services/informefinal.service';
 import { Component } from '@angular/core';
 
@@ -9,7 +9,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./informefinal.component.css']
 })
 export class InformefinalComponent {
-  proyectos: Proyecto[] = [];
+  informefinal: Informefinal[] = [];
 
   constructor(
     private informefinalService: InformefinalService
@@ -17,7 +17,7 @@ export class InformefinalComponent {
 
   ngOnInit(): void {
     this.informefinalService.listar().subscribe(data => {
-      this.proyectos = data
+      this.informefinal = data
       console.log(data)
     });
     ;
@@ -29,7 +29,7 @@ export class InformefinalComponent {
       // Aquí puedes realizar alguna acción después de eliminar el documento, si es necesario.
       // Por ejemplo, puedes actualizar la lista de documentos.
       this.informefinalService.listar().subscribe(data => {
-        this.proyectos = data;
+        this.informefinal = data
         console.log(data);
       });
     });

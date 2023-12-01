@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ListaproyecGruposComponent } from './pages/listaproyec-grupos/listaproyec-grupos.component';
+import { ListaproyecGruposComponent } from './pages/listaproyec-grupos/ListaproyecGruposComponent';
 
 const routes: Routes = [
   {

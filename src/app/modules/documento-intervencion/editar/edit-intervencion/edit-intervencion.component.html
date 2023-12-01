@@ -6,7 +6,7 @@
 <div class="borde">
     <div class="regresar">
         <a href="/home/documento_intervencion"><img src="/assets/pictures/regresar.png" class="boton_regresar"></a>
-        <p class="registrar_intervencion">Registrar Intervención</p>
+        <p class="registrar_intervencion">Editar Intervención</p>
     </div>
     <div class="datos_intervencion">
         <div class="estructura">
@@ -23,23 +23,13 @@
                     <label class="datos">Nombre de la autoridad:</label>
                     <input type="text" [(ngModel)]="documento.nombre_autoridad" class="form-control" />
                 </div>
-                <div class="contenedor_ubigeo">
-                    <label class="ubigeo">UBIGEO</label>
-                    <img src="/assets/pictures/ubicacion.png" class="ubicacion">
-                    <div class="contenedor_filtros">
-                        <div class="filtros">
-                            <label class="texto_ubigeo"></label>
-                            <select [(ngModel)]="documento.ubigeo">
-                                <option *ngFor="let ubigeo of ubigeo" [ngValue]="ubigeo">{{ubigeo.departamento}}</option>
-                            </select>
-
-                            <label class="texto_ubigeo"
-                                *ngIf="documento.parametros">{{documento.parametros.valor}}</label>
-                            <select [(ngModel)]="documento.parametros">
-                                <option *ngFor="let parametro of parametros" [ngValue]="parametro">{{parametro.valor}}</option>
-                            </select>
-                        </div>
-                    </div>
+                <div>
+                    <label class="datos">Ubigeo:</label>
+                    <select class="ubigeo-select" [(ngModel)]="documento.ubigeo">
+                        <option *ngFor="let ubigeo of ubigeo" [ngValue]="ubigeo">
+                            {{ubigeo.departamento}} -{{ubigeo.distrito}} - {{ubigeo.provincia}}
+                        </option>
+                    </select>
                 </div>
                 <div class="fecha_tipo">
                     <div class="contener_fechas">
@@ -54,25 +44,15 @@
                     </div>
                     <div class="tipo">
                         <div style="margin-top: 20px;">
-                            <label class="datos">Distrito:</label>
-                            <select class="tipo_doc">
-                                <option>Selecciona el provincia</option>
-                                <option>Provincia1</option>
-                                <option>Provincia</option>
-                                <option>Provincia3</option>
-                            </select>
-                        </div>
-                        <div style="margin-top: 20px;">
-                            <label class="datos">Distrito:</label>
-                            <select class="tipo_doc">
-                                <option>Selecciona el provincia</option>
-                                <option>Provincia1</option>
-                                <option>Provincia</option>
-                                <option>Provincia3</option>
+                            <label class="datos">Tipo de documentos:</label>
+                            <select class="tipo_doc" [(ngModel)]="documento.parametros">
+                                <option *ngFor="let parametros of parametros" [ngValue]="parametros">
+                                    {{parametros.valor}}</option>
                             </select>
                         </div>
                     </div>
                     <div class="contener_doc">
+                        <img src="/assets/pictures/aprobado.png" class="docu_img">
 
                     </div>
                 </div>

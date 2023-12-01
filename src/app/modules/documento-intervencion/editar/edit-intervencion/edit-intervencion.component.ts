@@ -29,28 +29,49 @@ export class EditIntervencionComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.listarpara();
+    this.listarubi();
+    this.aparecer();
+  }
+
+  listarubi() {
     this.documentoService.listarUbi().subscribe(dato => {
       this.ubigeo = dato
-      console.log(dato);
-    }),
+      console.log(dato)
+    });
+  }
 
-      this.documentoService.listarPar().subscribe(data => {
-        this.parametros = data
-        console.log(data);
-      })
+  listarpara() {
+    this.documentoService.listarPar().subscribe(dato => {
+      this.parametros = dato.filter(parametro => parametro.id === 1 || parametro.id === 2)
+    })
+  }
+
+  aparecer() {
+
     this.route.params.subscribe(params => {
       const id = params['id']
       console.log(id);
-      this.documentoService.IDdocumento(id).subscribe(data =>{
-        this.documento = data
-        console.log(data);
 
+      this.documentoService.IDdocumento(id).subscribe(data => {
+        this.documento = data;
+        const ubi = this.ubigeo.find(ubi => ubi.id === this.documento.ubigeo?.id);
+        if (ubi) {
+          this.documento.ubigeo = ubi;
+        } else {
+          console.error("Ubigeo no encontrado");
+        }
+
+        const par = this.parametros.find(par => par.id === this.documento.parametros?.id);
+        if (par) {
+          this.documento.parametros = par;
+        } else {
+          console.error("Parametros no encontrado");
+        }
       })
-      
     }
     )
   }
-
 
   Guardar() {
     console.log(this.documento)

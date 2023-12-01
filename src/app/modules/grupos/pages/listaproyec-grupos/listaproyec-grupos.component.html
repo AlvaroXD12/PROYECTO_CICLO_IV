@@ -2,62 +2,59 @@
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;800&display=swap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;800&family=Squada+One&display=swap"
     rel="stylesheet">
-
+    
 <div class="borde">
     <div class="regresar">
         <a href="/menu"><img src="/assets/pictures/regresar.png" class="boton_regresar"></a>
         <p class="proyecto">Proyecto - Grupos</p>
     </div>
-    <div class="crear_buscar">
+    <div class="contenedor_de_buscar">
+      <div class="buscador">
         <div class="buscar">
-            <label class="texto_buscar">Tipo de proyecto:</label>
-            <select class="caja_buscar1">
-              <option>-------</option>
-              <option>Proyecto</option>
-              <option>Programa</option>
-            </select>
-            <label class="texto_buscar">Modalidad:</label>
-            <select class="caja_buscar2">
-                <option>-------</option>
-                <option>General</option>
-                <option>Escuela</option>
-            </select>
-            <label class="texto_buscar">Carrera</label>
-            <select class="caja_buscar1">
-                <option>-------</option>
-                <option>2023-1</option>
-                <option>2023-2</option>
-            </select>
-            <label class="texto_buscar">Semestre:</label>
-            <select class="caja_buscar">
-                <option>-------</option>
-                <option>2023-1</option>
-                <option>2023-2</option>
-            </select>
+          <label class="texto_buscar">Escuela profesional:</label>
+          <select class="seleccionador1" (change)="selectEscuela($event)">
+            <option value="0" selected disabled>Seleccione una opcion</option>
+            <option value="{{item.id}}" *ngFor="let item of escuelas">{{item.carrera}}</option>
+          </select>
+          <!-- <label class="texto_buscar">Semestre</label>
+          <select class="seleccionador2"> -->
+            <!-- <option></option>
+            <option>Semetres 1</option>
+            <option>Semetres 2</option>
+            <option>Semetres 3</option> -->
+          <!-- </select> -->
+          <label class="texto_buscar">Proyecto:</label>
+          <input type="text" class="input" (keyup)="search($event)">
         </div>
+      </div>
+      <div>
+          <button class="add">CREAR</button>
+      </div>
     </div>
-    <div class="container_tabla">
+
+    <div class="container_tabla" *ngIf="proyectos.length>0">
       <table class="tabla">
         <thead>
             <tr>
                 <th class="id">N°</th>
-                <th class="nombre_afiliacion">Nombre de Proyecto</th>
-                <th class="tipo_proy">Tipo de Proyecto</th>
-                <th class="semestre">Semestre</th>
+                <th>Grupo</th>
+                <th class="integrantes">Proyecto</th>
+                <th class="actividades">Escuela Profesiona</th>
                 <th colspan="3" class="acción"></th>
             </tr>
         </thead>
         <tbody>
             <tr *ngFor="let proyecto of proyectos">
-                <td>{{proyecto.id}}</td>
-                <td>{{proyecto.nombre_proyecto}}</td>
-                <td class="tipo_proy">{{proyecto.tip_proyec?.nombre_tipro}}</td>
-                <td class="semestre">{{proyecto.parametros?.valor}}</td>
+                <td class="id">{{proyecto.id}}</td>
+                <td >{{proyecto.nombre_grupo}}</td>
+                <td class="integrantes">{{proyecto.actividad_ejecu.proyecto.nombre_proyecto}}</td>
+                <td class="actividades">{{proyecto.actividad_ejecu.proyecto.escu_prof.carrera}}</td>
                 <td class="acción">
-                    <a routerLink="/home/registrargrupos"><img src="/assets/pictures/imagen_grupos.png" class="descargar"></a>
+                  <a routerLink="/home/registrargrupos"><img src="/assets/pictures/editar.png" (click)="editar(proyecto)" class="editar"></a>
+                    <img src="/assets/pictures/borrar.png" (click)="eliminar(proyecto)" class="borrar">
                 </td>
             </tr>
         </tbody>
-    </table>
+      </table>
     </div>
 </div>

@@ -7,6 +7,6 @@ export class Roles {
     horas?: number;
     nota?: number;
     parametros?:Parametros;
-    proyectos?:Proyecto;
+    proyecto?:Proyecto;
     
 }

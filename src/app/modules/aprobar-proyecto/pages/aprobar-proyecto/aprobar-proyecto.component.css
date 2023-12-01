@@ -42,7 +42,7 @@
 .filtros-container {
     text-align: center;
     border-radius: 10px;
-    background: #A3A3A3;
+    background: rgba(163, 163, 163, 0.37);
     width: 1200px;
     margin: auto;
     height: 40px;
@@ -54,15 +54,22 @@ padding-top: 10px;
 grid-template-rows: repeat(4, auto);
 }
 .texto_buscar {
-    padding:35px;
+    padding:20px;
     font-family: Comic Neue;
     font-weight: bold;
 }
 .buscar {
-    background: white;
-    border-style: solid;
-    border: #014277;
-    border-radius: 5px;
+    border-radius: 7px; 
+    border-width: 1.7px;
+    font-family: 'Comic Neue';
+    font-size: 14px;
+    font-style: normal;
+    outline: none;
+    width: 150px;
+    height: 23px;
+    text-align: center;
+    border-color:#014277;
+    border-style:solid;
 }
 
 /* PARA LA TABLA */

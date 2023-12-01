@@ -6,86 +6,90 @@
 <div class="borde">
   <div class="regresar">
     <a [routerLink]="['/home/informefinal']"><img src="/assets/pictures/regresar.png" class="boton_regresar"></a>
-    <p class="documento_intervencion">Registrar Informe Final</p>
+    <p class="documento_intervencion">Editar Informe Final</p>
   </div>
   <div class="informe_final">
-    <form  >
+    <form>
       <div class="estructura">
         <div class="datos_1">
           <div class="container-registrofinal">
             <div class="colum-izquier">
-              <label class="datos">Nombre del proyecto:</label>
-              <input type="text"  class="form-control" />
+              <div>
+                <label class="datos">Nombre del proyecto:</label>
+                <input type="text" [(ngModel)]="proyecto.nombre_proyecto" class="form-control" />
+              </div>
               <label class="datos">Nombre del Coordinador:</label>
-              <input type="text" class="form-control" />
+              <input type="text" [(ngModel)]="proyecto.coordinador" class="form-control" />
 
               <div class="container_datos">
                 <div class="columna-izquierda">
                   <label class="datosderecha">Facultad:</label>
-                  <input type="text" class="form-controles"  />
+                  <input type="text" [(ngModel)]="proyecto.escu_prof" class="form-controles" />
                   <br>
                   <label class="datosderecha">Semestre:</label>
-                  <input type="text" class="form-controles" />
+                  <input type="text" [(ngModel)]="proyecto.parametros" class="form-controles" />
                   <br>
                   <label class="datosderecha">Participante estudiante::</label>
-                  <input type="text" class="form-controles" />
+                  <input type="text" [(ngModel)]="Informefinal.participantes_estudiantes" class="form-controles" />
                 </div>
                 <div class="columna-derecha">
                   <label class="datosderecha">Carrera:</label>
-                  <input type="text" class="form-controles" />
+                  <input type="text" [(ngModel)]="proyecto.escu_prof" class="form-controles" />
                   <label class="datosderecha">Ciclo:</label>
                   <input type="text" class="form-controles" />
                   <label class="datosderecha">Participante satisfacción:</label>
-                  <input type="text" class="form-controles" />
+                  <input type="text" [(ngModel)]="Informefinal.participantes_satisfaccion" class="form-controles" />
                 </div>
               </div>
             </div>
 
             <div class="linea_separa"></div>
-              <div class="colum-derech">
-                <div class="container-registrofinal2"></div>
-                <div class="descripcion_guardar">
-                  <div class="container_datos">
-                    <div class="columna-izquierda2">
-                      <label class="datosizquierda">Participacion Docentes:</label>
-                      <input type="text" class="form-controle-derecha" />
-                      <br>
-                      <label class="datosizquierda">Satisfacción de Docente:</label>
-                      <input type="text" class="form-controle-derecha" />
-                      <br>
-                      <label class="datosizquierda">Beneficiario:</label>
-                      <input type="text" class="form-controle-derecha" />
-                      <label class="datosizquierda">Cantidad de Beneficiario:</label>
-                      <input type="text" class="form-controle-derecha" />
-                      <label class="datosizquierda">Satisfaccion de Beneficiario:</label>
-                      <input type="text" class="form-controle-derecha" />
-                    </div>
-                    <div class="columna-derecha2">
-                      <label class="datosizquierda">Descripcion:</label>
-                      <input type="text" class="descripcion" />
+            <div class="colum-derech">
+              <div class="container-registrofinal2"></div>
+              <div class="descripcion_guardar">
+                <div class="container_datos">
+                  <div class="columna-izquierda2">
+                    <label class="datosizquierda">Participacion Docentes:</label>
+                    <input type="text" [(ngModel)]="Informefinal.participantes_docente" class="form-controle-derecha" />
+                    <br>
+                    <label class="datosizquierda">Satisfacción de Docente:</label>
+                    <input type="text" [(ngModel)]="Informefinal.satisfaccion_docente" class="form-controle-derecha" />
+                    <br>
+                    <label class="datosizquierda">Beneficiario:</label>
+                    <input type="text" [(ngModel)]="Informefinal.beneficiarios" class="form-controle-derecha" />
+                    <label class="datosizquierda">Cantidad de Beneficiario:</label>
+                    <input type="text" [(ngModel)]="Informefinal.cantidad_beneficiarios"
+                      class="form-controle-derecha" />
+                    <label class="datosizquierda">Satisfaccion de Beneficiario:</label>
+                    <input type="text" [(ngModel)]="Informefinal.satisfaccion_beneficiarios"
+                      class="form-controle-derecha" />
+                  </div>
+                  <div class="columna-derecha2">
+                    <label class="datosizquierda">Descripcion:</label>
+                    <input type="text" [(ngModel)]="Informefinal.descripcion" class="descripcion" />
 
-                      <div class="informe-div">
-                        <label class="datosinforme" >Informe:</label>
-                        <div class="agregar-plantilla-form-contenedor-input-file">
-                          <div class="doc-izquiera">
-                            <h5 class="letra-doc">Carta de Agradecimiento u Otros datos</h5>
-                          </div>
-                          <div class="doc-derecha">
-                            <input class="file" type="file" name="" id=""> <img class="doc" src="/assets/pictures/doc.png" alt="doc">
-                            <button class="visualizar">Visualizar</button>
-                          </div>
+                    <div class="informe-div">
+                      <label class="datosinforme">Informe:</label>
+                      <div class="agregar-plantilla-form-contenedor-input-file">
+                        <div class="doc-izquiera">
+                          <h5 class="letra-doc">Carta de Agradecimiento u Otros datos</h5>
                         </div>
-
+                        <div class="doc-derecha">
+                          <img class="doc" src="/assets/pictures/doc.png" alt="doc">
+                          <button class="visualizar">Visualizar</button>
+                        </div>
                       </div>
 
                     </div>
-                  </div>
 
-                  <div class="guardar">
-                    <input type="submit" class="texto_guardar" value="Guardar">
                   </div>
                 </div>
+
+                <div class="guardar" (click)="Guardar()">
+                  <input type="submit" class="texto_guardar" value="Guardar">
+                </div>
               </div>
+            </div>
 
           </div>
         </div>

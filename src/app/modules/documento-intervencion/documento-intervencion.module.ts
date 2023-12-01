@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { DocumentoIntervencionRoutingModule } from './documento-intervencion-routing.module';
 import { DocumentoIntervencionComponent } from './listar/documento-intervencion/documento-intervencion.component';
 import { RouterModule } from '@angular/router';
+import { FormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -12,7 +13,9 @@ import { RouterModule } from '@angular/router';
   imports: [
     CommonModule,
     DocumentoIntervencionRoutingModule,
-    RouterModule
+    RouterModule,
+    FormsModule
+
   ]
 })
 export class DocumentoIntervencionModule { }

@@ -1,3 +1,10 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;800&family=Squada+One&display=swap"
+    rel="stylesheet">
+    
 <div class="contenedor">
     <div class="borde">
         <div class="encabezado">
@@ -6,7 +13,7 @@
             <h1 class="titulo">Aprobación del Proyecto</h1>
 
         </div>
-        
+        <div class="container_tabla">
         <table class="tabla">
             <thead>
                 <th class="id">N°</th>
@@ -16,44 +23,17 @@
                 <th class="estado">Estado</th>
             </thead>
             <tbody>
-                <tr th:each="aprobar">
-                    <td class="id">01</td>
-                    <td class="nombre_afiliacion">Director de Mision</td>
-                    <td class="fecha">23/04/2023</td>
-                    <th class="comentario"><button mat-raised-button color="primary" (click)="openDialog()" class="coment">comentario</button></th>
-                    <td class="estado"><img class="estadoimg" src="../assets/pictures/Enproceso.png"></td>
-                </tr>
-                <tr th:each="aprobar">
-                    <td class="id">02</td>
-                    <td class="nombre_afiliacion">Tesoreria</td>
-                    <td class="fecha">23/04/2023</td>
+                <tr *ngFor="let aprobacion of Aprobacion">
+                    <td>{{aprobacion.id}}</td>
+                    <td>{{aprobacion.autoridad?.persona?.nombre}}</td>
+                    <td>{{aprobacion.fecha}}</td>
                     <th class="comentario"><button mat-raised-button color="primary" (click)="openDialog()" class="coment">comentario</button></th>
                     <td class="estado"><img class="estadoimg" src="../assets/pictures/validadofond.png"></td>
-                </tr>
-                <tr th:each="aprobar">
-                    <td class="id">03</td>
-                    <td class="nombre_afiliacion">Consejo de Escuela</td>
-                    <td class="fecha">23/04/2023</td>
-                    <th class="comentario"><button mat-raised-button color="primary" (click)="openDialog()" class="coment">comentario</button></th>
-                    <td class="estado"><img class="estadoimg" src="../assets/pictures/validadofond.png"></td>
-                </tr>
-                <tr th:each="aprobar">
-                    <td class="id">04</td>
-                    <td class="nombre_afiliacion">Consejo de Facultad</td>
-                    <td class="fecha">23/04/2023</td>
-                    <th class="comentario"><button mat-raised-button color="primary" (click)="openDialog()" class="coment">comentario</button></th>
-                    <td class="estado"><img class="estadoimg" src="../assets/pictures/validadofond.png"></td>
-                </tr>
-                <tr th:each="aprobar">
-                    <td class="id">05</td>
-                    <td class="nombre_afiliacion">Consejo Universitario</td>
-                    <td class="fecha">23/04/2023</td>
-                    <th class="comentario"><button mat-raised-button color="primary" (click)="openDialog()" class="coment">comentario</button></th>
-                    <td class="estado"><img class="estadoimg" src="../assets/pictures/Enproceso.png"></td>
                 </tr>
             </tbody>
             
             </table>
+        </div>
             
             <div class="atributos-container">
              <div class="formulario">

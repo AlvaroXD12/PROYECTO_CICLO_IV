@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { RegisRolesComponent } from './registrar-roles/regis-roles/regis-roles.component';
 import { RegisRolesRoutingModule } from './regis-roles-routing.module';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { RegisRolesRoutingModule } from './regis-roles-routing.module';
   imports: [
     CommonModule,
     RegisRolesRoutingModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ]
 })
 export class RegisRolesModule { }

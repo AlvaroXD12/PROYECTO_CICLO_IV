@@ -17,20 +17,20 @@ export class ActividadPlaniService {
     return this.http.get<Actividad_plani[]>(this.url + '/all');
   }
 
-  crear(actividadplani: Actividad_plani){
-    return this.http.post<string>(this.url +'/add' , actividadplani);
+  crear(actividad_plani: Actividad_plani): Observable<Object>{
+    return this.http.post<Actividad_plani>(this.url +'/add' , actividad_plani);
   }
 
-  editar(actividadplani: Actividad_plani) {
-    return this.http.put(this.url, actividadplani);
+  editar(id: number, actividad_plani: Actividad_plani) : Observable<Object>{
+    return this.http.put(this.url + '/edit/' + id, actividad_plani);
   }
   
   eliminar(id: number): Observable<any> {
     return this.http.delete(this.url + '/delete/' + id);
   }
 
-  IDactividadplani(id: Actividad_plani) {
-    this.http.get(this.url + '/' + id);
+  IDactividadplani(id: number): Observable<any> {
+    return this.http.get<Actividad_plani>(this.url + '/' + id);
   }
 
   obtenerActividadesPorProyecto(id: number): Observable<Actividad_plani[]> {

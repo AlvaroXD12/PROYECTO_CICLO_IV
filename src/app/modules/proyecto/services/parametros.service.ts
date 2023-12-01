@@ -31,4 +31,5 @@ export class ParametrosService {
   IDparametros(id: Parametros) {
     this.http.get(this.url + '/' + id);
   }
+  
 }

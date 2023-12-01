@@ -1,0 +1,302 @@
+.borde {
+  position     : relative;
+  top          : 0.2vw;
+  left         : 2vw;
+  width        : 75vw;
+  height       : 37vw;
+  border-radius: 1.5vw;
+  border       : 0.2vw solid #F7A800;
+  background   : rgba(255, 255, 255, 0.90);
+  opacity      : 90%;
+
+}
+
+.container-registrofinal {
+  display: flex;
+}
+
+.container-registrofinal2 {
+  display: flex;
+}
+
+.colum-izquier {
+  flex-basis   : 50vw;
+  /* Borde en el lado derecho de la columna izquierda para separar las columnas */
+  padding-right: 0vw;
+  padding-top  : 1.9vw;
+  /* Espacio entre el contenido y el borde */
+}
+
+.colum-derech {
+  flex-basis: 60vw;
+  /* Espacio entre el contenido y el borde */
+}
+
+
+/* Media query para pantallas más pequeñas, por ejemplo, menor a 768px */
+
+
+.boton_regresar {
+  position: relative;
+  top     : 1.3vw;
+  left    : 1.3vw;
+  width   : 1.5vw;
+  height  : 1.5vw;
+}
+
+.documento_intervencion {
+  position   : relative;
+  left       : 22vw;
+  top        : 0.29vw;
+  color      : #014277;
+  font-family: Squada One;
+  font-size  : 3.5vw;
+  font-style : normal;
+  font-weight: 200;
+  line-height: normal;
+  width      : 29.57vw;
+}
+
+.datos {
+  position   : relative;
+  top        : 0vw;
+  font-family: Comic Neue;
+  font-size  : 1vw;
+  font-style : normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+
+.datos_1 {
+  position: relative;
+  left    : 1vw;
+  top     : 1vw;
+}
+
+.colum-derech {
+  position: relative;
+  top     : 2vw;
+  width   : 0.1vw;
+  height  : 20vw;
+  left    : -1em;
+}
+
+.descripcion_guardar {
+  position: relative;
+  left    : 2vw;
+  top     : -0.71vw;
+}
+
+.descripcion {
+  position      : relative;
+  top           : 0.3vw;
+  left          : -3vw;
+  width         : 17.8vw;
+  padding-bottom: 9vw;
+  border-radius : 0.5vw;
+  border        : 0.16vw solid #014277;
+}
+
+.guardar {
+  position     : relative;
+  top          : 3.5vw;
+  left         : 27vw;
+  padding-top  : 0.5vw;
+  width        : 9vw;
+  height       : 2vw;
+  border-radius: 2vw;
+  background   : #F7A800;
+
+}
+
+.texto_guardar {
+  position        : relative;
+  top             : 0vw;
+  font-family     : Comic Neue;
+  font-size       : 1.2vw;
+  margin-left     : 2.3vw;
+  background-color: transparent;
+  border          : none;
+  color           : #014277;
+  ;
+}
+
+.linea_separa {
+  background-color: #F7A800;
+  width           : 0.1vw;
+  height          : 25vw;
+}
+
+.datos2 {
+  position   : relative;
+  top        : 0vw;
+  font-family: Comic Neue;
+  font-size  : 1vw;
+  font-style : normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.datosderecha {
+  position   : relative;
+  top        : -0.1vw;
+  font-family: Comic Neue;
+  font-size  : 1vw;
+  font-style : normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.datosizquierda {
+  position   : relative;
+  top        : 0.2vw;
+  font-family: Comic Neue;
+  font-size  : 1vw;
+  font-style : normal;
+  font-weight: 700;
+  line-height: normal;
+
+}
+
+.datosinforme {
+  position   : relative;
+  top        : 0.1vw;
+  left       : -3vw;
+  font-family: Comic Neue;
+  font-size  : 1vw;
+  font-style : normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+
+
+.container_datos {
+  display        : flex;
+  justify-content: space-between;
+
+  /* Espacio entre columnas */
+}
+
+.columna-derecha,
+.columna-izquierda {
+  position: relative;
+  top     : 0.4vw;
+  left    : 0vw;
+}
+
+.columna-derecha2,
+.columna-izquierda2 {
+  position: relative;
+  top     : 0.4vw;
+  left    : 0vw;
+}
+
+.columna-izquierda2,
+.columna-derecha2 {
+  flex-basis: calc(50% - 10px);
+  /* 50% de ancho para cada columna con espacio entre ellas */
+}
+
+.columna-izquierda,
+.columna-derecha {
+  flex-basis: calc(50% - 10px);
+  /* 50% de ancho para cada columna con espacio entre ellas */
+}
+
+/* Otros estilos según sea necesario */
+
+
+.form-controles {
+  position     : relative;
+  top          : 0.2vw;
+  left         : 0vw;
+  width        : 14.9vw;
+  height       : 2.2vw;
+  border-radius: 5px;
+  border       : 0.15vw solid #014277;
+  background   : #FFF;
+
+}
+
+
+.form-controle-derecha {
+  position     : relative;
+  top          : 0.2vw;
+  left         : 0vw;
+  width        : 16vw;
+  height       : 2.2vw;
+  border-radius: 0.4vw;
+  border       : 0.15vw solid #014277;
+  background   : #FFF;
+  margin-top   : 0.12vw;
+}
+
+.form-control {
+  position     : relative;
+  top          : 0.2vw;
+  width        : 32.5vw;
+  height       : 2.2vw;
+  border-radius: 5px;
+  border       : 0.15vw solid #014277;
+  background   : #FFF;
+}
+
+.agregar-plantilla-form-contenedor-input-file {
+  padding-top  : 2vw;
+  top          : 3px;
+  height       : 4.3vw;
+  border-radius: 5px;
+  border       : 0.15vw solid #014277;
+  background   : rgba(197, 194, 194, 0.77);
+  margin-left  : -3vw;
+}
+
+.agregar-plantilla-form-contenedor-input-file {
+  display: flex;
+  padding: 1vw;
+  width  : 15.6vw;
+  gap    : 1vw;
+}
+
+.visualizar {
+  position     : relative;
+  top          : -2.1vw;
+  left         : 0.5vw;
+  border-radius: 0.6vw;
+  background   : #014277;
+  width        : 4.5vw;
+  height       : 1.8vw;
+  color        : #F7A800;
+  place-items  : center;
+  font-family  : Comic Neue;
+  font-size    : 0.9vw;
+  font-weight  : 0vw;
+  line-height  : normal;
+  border       : none;
+}
+
+.doc {
+  position: relative;
+  top     : -1.3vw;
+  left    : 0vw;
+  height  : 5vw;
+  width   : 5vw;
+}
+
+.letra-doc {
+  font-family: Germania One;
+  color      : #014277;
+  text-align : center;
+  font-size  : 1.1vw;
+  border     : 1vw;
+  font-style : normal;
+  font-weight: bold;
+  line-height: normal;
+}
+.doc_derecha{
+  display: flex;
+   justify-content: space-between;
+}
+

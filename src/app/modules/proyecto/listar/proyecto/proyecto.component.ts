@@ -59,5 +59,14 @@ export class ProyectoComponent implements OnInit {
       this.router.navigate(['/home/proyecto/editar']);
     })
   }
+  filtro(event: Event) {
+    const input = event.target as HTMLInputElement;
+    const value = input.value;
+    this.proyectoService.listar().subscribe(data => {
+      this.proyectos = data
+      this.proyectos = this.proyectos.filter(data => data.tip_proyec?.id == parseInt(value) + 1)
+
+    })
+  }
 
 }

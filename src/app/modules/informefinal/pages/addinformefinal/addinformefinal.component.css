@@ -54,7 +54,7 @@
   font-style : normal;
   font-weight: 200;
   line-height: normal;
-  width      : 19.5vw;
+  width      : 25.2vw;
 }
 
 .datos {
@@ -192,6 +192,7 @@
   top     : 0.4vw;
   left    : 0vw;
 }
+
 .columna-izquierda2,
 .columna-derecha2 {
   flex-basis: calc(50% - 10px);
@@ -261,8 +262,8 @@
 
 .visualizar {
   position     : relative;
-  top          : -1.9vw;
-  left         : -2.6vw;
+  top          : -2.1vw;
+  left         : 0.5vw;
   border-radius: 0.6vw;
   background   : #014277;
   width        : 4.5vw;
@@ -278,8 +279,8 @@
 
 .doc {
   position: relative;
-  top     : -2.7vw;
-  left    : 2vw;
+  top     : -1.3vw;
+  left    : 0vw;
   height  : 5vw;
   width   : 5vw;
 }
@@ -294,3 +295,8 @@
   font-weight: bold;
   line-height: normal;
 }
+.doc_derecha{
+  display: flex;
+   justify-content: space-between;
+}
+

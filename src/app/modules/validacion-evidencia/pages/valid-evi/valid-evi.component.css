@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins&display=swap');
+
+.borde {
+  margin-top   : 2px;
+  margin-left  : 15px;
+  width        : 1200px;
+  height       : 600px;
+  border-radius: 23px;
+  border       : 6px solid #F7A800;
+  background   : rgba(255, 255, 255, 0.90);
+}
+
+.regresar {
+  display: flex;
+}
+
+.boton_regresar {
+  margin-top : 20px;
+  margin-left: 10px;
+}
+
+.titulo {
+  margin-left: 380px;
+  margin-top : 15px;
+  color      : #014277;
+  font-family: Squada One;
+  font-size  : 50px;
+  font-style : normal;
+  font-weight: 200;
+  line-height: normal;
+}
+
+
+
+
+.texto_guardar {
+  margin-top      : 5px;
+  font-family     : Comic Neue;
+  font-size       : 15px;
+  font-style      : normal;
+  line-height     : normal;
+  margin-left     : 40px;
+  background-color: transparent;
+  border          : none;
+}
+
+.contenedor_grupos {
+  display  : flex;
+  flex-wrap: wrap;
+  overflow : hidden;
+}
+
+.contenedor_grupo {
+  width           : 34vw;
+  height          : 14.5vw;
+  background-color: #CFCFCF;
+  margin-left     : 4vw;
+  margin-bottom   : 5vh;
+  border-radius   : 0.6vw;
+  border          : 0.16vw solid #014277;
+}
+
+.actividad {
+  display  : flex;
+  flex-wrap: wrap;
+}
+
+.actividadx {
+  margin-top : 0.58268vw;
+  font-weight: bold;
+  color      : #A60000;
+  font-size  : x-large;
+  position   : static;
+
+
+}
+
+.actividad1 {
+  margin-top : 0.58268vw;
+  font-weight: bold;
+  color      : #014277;
+}
+
+.grupo {
+  display  : flex;
+  flex-wrap: wrap;
+  height   : 2vw;
+}
+
+.cerrar {
+  margin-left : 10px;
+  margin-right: 60px;
+  font-size   : 10px;
+}
+
+.seleccionador {
+  border-radius   : 0.9vh;
+  position        : relative;
+  top             : -1.5vw;
+  margin-left     : 5vw;
+  width           : 28vw;
+  height          : 3.5vh;
+  background-color: #F2EAEB;
+  border          : 0.12vw solid #F7A800;
+}
+
+.integrantes {
+  border          : none;
+  border-radius   : 5px;
+  height          : 25px;
+  position        : relative;
+  left            : 15vw;
+  width           : 4vw;
+  top             : -0.01vw;
+  height          : 1.2vw;
+  color           : #014277;
+  background-color: #F7A800;
+}
+.guardar {
+  border          : none;
+  border-radius   : 5vw;
+  height          : 2vw;
+  position        : relative;
+  left            : 38vw;
+  width           : 4vw;
+  height          : 1.2vw;
+  color           : #014277;
+  background-color: #F7A800;
+}
+
+button {
+  font-family: Impact;
+}
+
+.tabla {
+  width           : 32vw;
+  height          : 0vw;
+  /* Establece los márgenes izquierdo y derecho en "auto" para centrar horizontalmente */
+  background-color: #014277;
+  margin-left     : 1vw;
+  margin-top      : -1.5vw;
+}
+
+table {
+  border-collapse: collapse;
+
+}
+
+td {
+  border-collapse: collapse;
+  border-top     : 3px solid #CFCFCF;
+  text-align     : center;
+  overflow       : hidden;
+  color          : white;
+  font-family  : 'Comic Neue';
+}
+
+.estado {
+  background-color: #F7A800;
+  border-radius   : 20rem;
+  width           : 4vw;
+  padding-top     : -2vw;
+}
+.porcentaje {
+  background-color: #CFCFCF;
+  border-radius   : 20rem;
+  width           : 4vw;
+  padding-top     : -2vw;
+  color: #F2EAEB;
+}

@@ -1,0 +1,75 @@
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;800&family=Squada+One&display=swap"
+  rel="stylesheet">
+
+<div class="borde">
+  <div class="regresar">
+    <a [routerLink]="['/home/validacionevidencia']"><img src="/assets/pictures/regresar.png" class="boton_regresar"></a>
+    <p class="proyecto">Lista de evidencia</p>
+  </div>
+  <div class="crear_buscar">
+    <div class="buscar">
+      <label class="texto_buscar">Tipo de proyecto:</label>
+      <select class="caja_buscar1">
+        <option> </option>
+        <option>Proyecto</option>
+        <option>Programa</option>
+      </select>
+      <label class="texto_buscar">Escuela Profesional:</label>
+      <select class="caja_buscar2">
+        <option> </option>
+        <option>FIA</option>
+        <option>FCE</option>
+        <option>FACTEO</option>
+      </select>
+
+      <label class="texto_buscar">Semestre:</label>
+      <select class="caja_buscar">
+        <option> </option>
+        <option>2023-1</option>
+        <option>2023-2</option>
+      </select>
+    </div>
+  </div>
+  <div class="container_tabla">
+    <table class="tabla">
+      <thead>
+        <tr>
+          <th class="id">N°</th>
+          <th class="nombre_afiliacion">Nombre de Proyecto</th>
+          <th class="tipo_proy">Tipo de Proyecto</th>
+          <th class="semestre">Semestre</th>
+          <th class="accion">Accion</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let evidencia of evidencia">
+          <td>{{evidencia.id}}</td>
+          <td>{{evidencia.integrantes?.curso_arti_estu?.curso_articu?.proyecto?.nombre_proyecto}}</td>
+          <td>{{evidencia.integrantes?.curso_arti_estu?.curso_articu?.proyecto?.documento?.parametros?.tipos}}</td>
+          <td>{{evidencia.integrantes?.curso_arti_estu?.curso_articu?.proyecto?.parametros?.tipos}}</td>
+          <td class="accion">
+            <!-- <img src="/assets/pictures/cheque.png" class="check" width="25vw"> -->
+            <style>
+              .accion {
+                width: 4.6vw;
+                text-decoration: center;
+                image-rendering: auto;
+              }
+
+              .check {
+                color: white;
+                filter: invert(100%);
+                padding-right: 0.2vw;
+              }
+            </style>
+            <a [routerLink]="['/home/validevi']"><img src="/assets/pictures/editar.png" class="editar"></a>
+
+
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

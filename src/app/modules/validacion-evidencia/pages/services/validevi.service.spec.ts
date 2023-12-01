@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { IntegrantesService } from './integrantes.service';
+import { ValideviService } from './validevi.service';
 
-describe('IntegrantesService', () => {
-  let service: IntegrantesService;
+describe('ValideviService', () => {
+  let service: ValideviService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(IntegrantesService);
+    service = TestBed.inject(ValideviService);
   });
 
   it('should be created', () => {

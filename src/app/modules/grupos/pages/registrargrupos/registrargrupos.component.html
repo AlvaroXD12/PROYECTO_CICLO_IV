@@ -6,277 +6,94 @@
 <div class="borde">
     <div class="regresar">
         <a href="/menu"><img src="/assets/pictures/regresar.png" class="boton_regresar"></a>
-        <p class="titulo">Creación de los grupos</p>
+        <p class="titulo">Gestión de grupo</p>
     </div>
-    <div class="contenedor_opciones">
-        <button class="button_creargrupos">
-            <p class="text">CREAR GRUPOS</p>
-        </button>
-        <button class="button_editar">
-            <p class="text">EDITAR</p>
-        </button>
-    </div>
-    <div class="contenedor_grupos">
-        <div class="contenedor_grupo">
-            <div class="grupo">
-                <div class="cerrar1">X</div>
-                <div class="actividadx">Grupo 01</div>
-                <div class="agregar">+</div>
+    <div class="contenedor1">
+      <div class="integrantess">
+        <div class="contenedor_integrantes">
+          <div class="title">Integrantes</div>
+          <div>
+            <div class="actividad">
+                <div class="nom">Nommbre del alumno:</div>
             </div>
-            <div>
-                <div class="actividad">
-                    <div class="cerrar">X</div>
-                    <div class="actividad1">Actividad 01</div>
-                </div>
-                <select class="seleccionador">
-                    <option>Actividad</option>
-                    <option>Departamento1</option>
-                    <option>Departamento2</option>
-                    <option>Departamento3</option>
-                </select>
-            </div>
-            <div class="separador">
-                <div class="actividad">
-                    <div class="cerrar">X</div>
-                    <div class="actividad1">Actividad 02</div>
-                </div>
-                <select class="seleccionador">
-                    <option>Actividad</option>
-                    <option>Departamento1</option>
-                    <option>Departamento2</option>
-                    <option>Departamento3</option>
-                </select>
-            </div>
-            <a [routerLink]="['/home/grupos/integrantes']"><button class="integrantes">Integrantes</button></a>
+            <select class="seleccionador" (change)="selectAlumno($event)">
+                <option disabled selected value="0" >Seleccione Alumno</option>
+                <option value="{{item.persona?.nombre + ' ' + item.persona?.apeliido_pat}}" *ngFor="let item of alumnos">{{item.persona?.nombre+ " "+item.persona?.apeliido_pat}}</option>
+            </select>
         </div>
-        <div class="contenedor_grupo">
-            <div class="grupo">
-                <div class="cerrar1">X</div>
-                <div class="actividadx">Grupo 02</div>
-                <div class="agregar">+</div>
+        <div class="separador">
+            <div class="actividad">
+                <div class="nom">Rol:</div>
             </div>
-            <div>
-                <div class="actividad">
-                    <div class="cerrar">X</div>
-                    <div class="actividad1">Actividad 01</div>
-                </div>
-                <select class="seleccionador">
-                    <option>Actividad</option>
-                    <option>Departamento1</option>
-                    <option>Departamento2</option>
-                    <option>Departamento3</option>
-                </select>
-            </div>
-            <div class="separador">
-                <div class="actividad">
-                    <div class="cerrar">X</div>
-                    <div class="actividad1">Actividad 02</div>
-                </div>
-                <select class="seleccionador">
-                    <option>Actividad</option>
-                    <option>Departamento1</option>
-                    <option>Departamento2</option>
-                    <option>Departamento3</option>
-                </select>
-            </div>
-            <a [routerLink]="['/home/grupos/integrantes']"><button class="integrantes">Integrantes</button></a>
+            <select class="seleccionador"  (change)="selectRol($event)">
+              <option disabled selected value="0">Seleccione Rol</option>
+                <option value="{{item.funcion}}" *ngFor="let item of roles">{{item.funcion}}</option>
+            </select>
+          </div>
+          <button class="agregar" (click)="guardar()">Guardar</button>
+        </div>
+      </div>
 
-        </div>
-        <div class="contenedor_grupo">
-            <div class="grupo">
-                <div class="cerrar1">X</div>
-                <div class="actividadx">Grupo 03</div>
-                <div class="agregar">+</div>
-            </div>
-            <div>
-                <div class="actividad">
-                    <div class="cerrar">X</div>
-                    <div class="actividad1">Actividad 01</div>
-                </div>
-                <select class="seleccionador">
-                    <option>Actividad</option>
-                    <option>Departamento1</option>
-                    <option>Departamento2</option>
-                    <option>Departamento3</option>
-                </select>
-            </div>
-            <div class="separador">
-                <div class="actividad">
-                    <div class="cerrar">X</div>
-                    <div class="actividad1">Actividad 02</div>
-                </div>
-                <select class="seleccionador">
-                    <option>Actividad</option>
-                    <option>Departamento1</option>
-                    <option>Departamento2</option>
-                    <option>Departamento3</option>
-                </select>
-            </div>
-            <a [routerLink]="['/home/grupos/integrantes']"><button class="integrantes">Integrantes</button></a>
-        </div>
-        <div class="contenedor_grupo">
-            <div class="grupo">
-                <div class="cerrar1">X</div>
-                <div class="actividadx">Grupo 04</div>
-                <div class="agregar">+</div>
-            </div>
-            <div>
-                <div class="actividad">
-                    <div class="cerrar">X</div>
-                    <div class="actividad1">Actividad 01</div>
-                </div>
-                <select class="seleccionador">
-                    <option>Actividad</option>
-                    <option>Departamento1</option>
-                    <option>Departamento2</option>
-                    <option>Departamento3</option>
-                </select>
-            </div>
-            <div class="separador">
-                <div class="actividad">
-                    <div class="cerrar">X</div>
-                    <div class="actividad1">Actividad 02</div>
-                </div>
-                <select class="seleccionador">
-                    <option>Actividad</option>
-                    <option>Departamento1</option>
-                    <option>Departamento2</option>
-                    <option>Departamento3</option>
-                </select>
-            </div>
-            <a [routerLink]="['/home/grupos/integrantes']"><button class="integrantes">Integrantes</button></a>
-        </div>
-        <div class="contenedor_grupo">
-            <div class="grupo">
-                <div class="cerrar1">X</div>
-                <div class="actividadx">Grupo 05</div>
-                <div class="agregar">+</div>
-            </div>
-            <div>
-                <div class="actividad">
-                    <div class="cerrar">X</div>
-                    <div class="actividad1">Actividad 01</div>
-                </div>
-                <select class="seleccionador">
-                    <option>Actividad</option>
-                    <option>Departamento1</option>
-                    <option>Departamento2</option>
-                    <option>Departamento3</option>
-                </select>
-            </div>
-            <div class="separador">
-                <div class="actividad">
-                    <div class="cerrar">X</div>
-                    <div class="actividad1">Actividad 02</div>
-                </div>
-                <select class="seleccionador">
-                    <option>Actividad</option>
-                    <option>Departamento1</option>
-                    <option>Departamento2</option>
-                    <option>Departamento3</option>
-                </select>
-            </div>
-            <a [routerLink]="['/home/grupos/integrantes']"><button class="integrantes">Integrantes</button></a>
-        </div>
-        <div class="contenedor_grupo">
-            <div class="grupo">
-                <div class="cerrar1">X</div>
-                <div class="actividadx">Grupo 06</div>
-                <div class="agregar">+</div>
-            </div>
-            <div>
-                <div class="actividad">
-                    <div class="cerrar">X</div>
-                    <div class="actividad1">Actividad 01</div>
-                </div>
-                <select class="seleccionador">
-                    <option>Actividad</option>
-                    <option>Departamento1</option>
-                    <option>Departamento2</option>
-                    <option>Departamento3</option>
-                </select>
-            </div>
-            <div class="separador">
-                <div class="actividad">
-                    <div class="cerrar">X</div>
-                    <div class="actividad1">Actividad 02</div>
-                </div>
-                <select class="seleccionador">
-                    <option>Actividad</option>
-                    <option>Departamento1</option>
-                    <option>Departamento2</option>
-                    <option>Departamento3</option>
-                </select>
-            </div>
-            <a [routerLink]="['/home/grupos/integrantes']"><button class="integrantes">Integrantes</button></a>
-        </div>
-        <div class="contenedor_grupo">
-            <div class="grupo">
-                <div class="cerrar1">X</div>
-                <div class="actividadx">Grupo 07</div>
-                <div class="agregar">+</div>
-            </div>
-            <div>
-                <div class="actividad">
-                    <div class="cerrar">X</div>
-                    <div class="actividad1">Actividad 01</div>
-                </div>
-                <select class="seleccionador">
-                    <option>Actividad</option>
-                    <option>Departamento1</option>
-                    <option>Departamento2</option>
-                    <option>Departamento3</option>
-                </select>
-            </div>
-            <div class="separador">
-                <div class="actividad">
-                    <div class="cerrar">X</div>
-                    <div class="actividad1">Actividad 02</div>
-                </div>
-                <select class="seleccionador">
-                    <option>Actividad</option>
-                    <option>Departamento1</option>
-                    <option>Departamento2</option>
-                    <option>Departamento3</option>
-                </select>
-            </div>
-            <a [routerLink]="['/home/grupos/integrantes']"><button class="integrantes">Integrantes</button></a>
-        </div>
-        <div class="contenedor_grupo">
-            <div class="grupo">
-                <div class="cerrar1">X</div>
-                <div class="actividadx">Grupo 08</div>
-                <div class="agregar">+</div>
-            </div>
-            <div>
-                <div class="actividad">
-                    <div class="cerrar">X</div>
-                    <div class="actividad1">Actividad 01</div>
-                </div>
-                <select class="seleccionador">
-                    <option>Actividad</option>
-                    <option>Departamento1</option>
-                    <option>Departamento2</option>
-                    <option>Departamento3</option>
-                </select>
-            </div>
-            <div class="separador">
-                <div class="actividad">
-                    <div class="cerrar">X</div>
-                    <div class="actividad1">Actividad 02</div>
-                </div>
-                <select class="seleccionador">
-                    <option>Actividad</option>
-                    <option>Departamento1</option>
-                    <option>Departamento2</option>
-                    <option>Departamento3</option>
-                </select>
-            </div>
-            <a [routerLink]="['/home/grupos/integrantes']"><button class="integrantes">Integrantes</button></a>
-        </div>
-    </div>
-    <div>
-
+      <div class="listado_integrantes">
+        <table class="tabla">
+          <thead>
+              <tr>
+                  <th class="id">N°</th>
+                  <th class="ACTI_ALUM">Alumno</th>
+                  <th class="rol">Rol</th>
+                  <th colspan="3" class="acción">Acciones</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr *ngFor="let item of grupos; let i = index" >
+                  <td class="id">{{i+1}}</td>
+                  <td class="rol">{{item.nombre}}</td>
+                  <td class="rol">{{item.rol}}</td>
+                  <td class="acción">
+                    <img src="/assets/pictures/basura.png" (click)="delete(item.nombre)" class="borrar">
+                  </td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
+
+      <div class="contenedor2">
+        <div class="actividad">
+          <div class="contenedor_actividades">
+            <div class="title">Actividad</div>
+            <div>
+              <div class="actividad">
+                  <div class="nom">Nombre de la actividad:</div>
+              </div>
+              <select class="seleccionador" [(ngModel)]="grupo.actividad_ejecu">
+                <option disabled selected>Seleccione Actividad</option>
+                <option *ngFor="let item of ejecucion" [ngValue]="item">{{item.nombre_actividad}}</option>
+              </select>
+          </div>
+            <button class="agregar" (click)="Guardar()">Guardar</button>
+          </div>
+          <div class="listado_actividades">
+            <table class="tabla">
+              <thead>
+                  <tr>
+                      <th class="id">N°</th>
+                      <th class="ACTI_ALUM">Actividad</th>
+                      <th class="date">Fecha Inicio</th>
+                      <th class="date">Fecha Fin</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr >
+                      <td class="id">{{grupoAdd.actividad_ejecu.idp}}</td>
+                      <td class="date">{{grupoAdd.actividad_ejecu.nombre_actividad}}</td>
+                      <td class="date">{{grupoAdd.actividad_ejecu.fecha_inicio}}</td>
+                      <td class="date">{{grupoAdd.actividad_ejecu.fecha_fin}}</td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
 </div>

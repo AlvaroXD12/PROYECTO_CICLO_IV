@@ -31,7 +31,20 @@
 .crear_buscar {
     display: flex;
 }
+.caja_buscar{
+    border-radius: 7px; 
+    border-width: 1.7px;
+    font-family: 'Comic Neue';
+    font-size: 14px;
+    font-style: normal;
+    outline: none;
+    width: 150px;
+    height: 23px;
+    text-align: center;
+    border-color:#014277;
+    border-style:solid;
 
+}
 .boton_crear {
     margin-top: 20px;
     margin-left: 30px;
@@ -338,12 +351,10 @@ td {
 }
 
 .texto_buscar {
-    position:center;
     margin-left: 20px;
+    margin-right: 10px;
     color: #000;
     font-family: Comic Neue;
     font-size: 15px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: normal;
+    font-style: normal; 
 }

@@ -35,14 +35,24 @@
 .regresar {
     padding: 5px;
 }
-
+.container_tabla { /* Tamaño máximo del contenedor */
+    margin-left: 27px;
+    margin-top: 12px;
+    max-height: 410px;
+    width: 1145px;
+    overflow-y: auto;   
+   border: 4px solid #F7A800;
+  }
 /* PARA LA TABLA */
 .tabla {
     border-radius: 2px;
     border-style: solid ;
     border-color: #F7A800;
     background: rgba(169, 169, 169, 0.16);;
-    width: 1200px;
+    width: 1128px;
+    height: 100%;
+    border-collapse: collapse;
+    overflow-y: auto;
     margin: 10px auto;
     color: white;
     border-collapse: collapse;
@@ -68,7 +78,7 @@ td {
     margin: auto;
     padding: 4px; /* Añadido espacio alrededor del contenedor */
     position: relative;
-    top:150px;
+    top:20px;
 }
 
 .formulario {

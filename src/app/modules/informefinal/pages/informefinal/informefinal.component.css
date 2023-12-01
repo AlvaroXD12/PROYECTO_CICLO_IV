@@ -35,10 +35,10 @@
 }
 
 .boton_crear {
-  position     : relative;
-  top          : 0.15vw;
-  left         : -3vw;
+  position     : sticky;
   padding-top  : 0.5vw;
+  left         : 20vw;
+  top          : 16.6vw;
   width        : 9vw;
   height       : 2vw;
   border-radius: 0.5vw;
@@ -53,6 +53,7 @@
   font-size      : 1.5VW;
   line-height    : normal;
   text-decoration: none;
+  padding-top    : 2vw;
 }
 
 .buscar {
@@ -60,7 +61,7 @@
   position     : relative;
   top          : 0vw;
   left         : 2vw;
-  width        : 73vw;
+  width        : 65vw;
   height       : 2.2vw;
   border-radius: 1vw;
   background   : rgba(163, 163, 163, 0.37);
@@ -69,21 +70,32 @@
 }
 
 .tabla {
-  width           : 74vw;
+  height          : 300px;
+  width: 1158px;
   margin          : 1.2vw auto 0;
   border          : 0.3vw solid #F7A800;
   background-color: #014277;
   border-collapse : collapse;
+  overflow-y      : auto;
+}
+
+.container_tabla {
+  /* Tamaño máximo del contenedor */
+  margin-left: 27px;
+  max-height : 410px;
+  width      : 1145px;
+  overflow-y : auto;
+  border     : 4px solid #F7A800;
 }
 
 th,
 td {
-  padding        : 0.7vw;
-  border         : 0.12vw solid rgba(255, 255, 255, 0.50);
+  padding        : 5px;
+  border         : 3px solid rgba(255, 255, 255, 0.50);
   border-collapse: collapse;
   color          : white;
   font-family    : Comic Neue;
-  font-size      : 1vw;
+  font-size      : 15px;
   font-style     : normal;
   font-weight    : 650;
   line-height    : normal;

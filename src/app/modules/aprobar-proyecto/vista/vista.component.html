@@ -1,3 +1,10 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;800&family=Squada+One&display=swap"
+    rel="stylesheet">
+
 <div class="contenedor">
     <div class="borde">
         <div class="encabezado">
@@ -52,92 +59,14 @@
             </thead>
 
             <tbody>
-                <tr th:each="reporte-proyecto">
-                    <td th:text="id">01</td>
-                    <td th:text="proyecto">proyecto01</td>
-                    <td th:text="participantes_estudiantes">30</td>
-                    <td th:text="participantes_satisfaccion">30</td>
-                    <td th:text="participantes_docentes">5</td>
-                    <td th:text="cantidad_beneficiarios">25</td>
-                    <td th:text="satifaccion_beneficiario">25</td>
-                    <td class="accion">
-                        <span routerLink="/home/aprobar/vista"><img src="../assets/pictures/descargar.png" width="25px"></span>
-                    </td>
-                </tr>
-
-                <tr th:each="reporte-proyecto">
-                    <td th:text="id">02</td>
-                    <td th:text="proyecto">proyecto02</td>
-                    <td th:text="participantes_estudiantes">30</td>
-                    <td th:text="participantes_satisfaccion">30</td>
-                    <td th:text="participantes_docentes">5</td>
-                    <td th:text="cantidad_beneficiarios">25</td>
-                    <td th:text="satifaccion_beneficiario">25</td>
-                    <td class="accion">
-                        <span routerLink="/home/aprobar/vista"><img src="../assets/pictures/descargar.png" width="25px"></span>
-                    </td>
-                </tr>
-
-                <tr th:each="reporte-proyecto">
-                    <td th:text="id">03</td>
-                    <td th:text="proyecto">proyecto03</td>
-                    <td th:text="participantes_estudiantes">30</td>
-                    <td th:text="participantes_satisfaccion">30</td>
-                    <td th:text="participantes_docentes">5</td>
-                    <td th:text="cantidad_beneficiarios">25</td>
-                    <td th:text="satifaccion_beneficiario">25</td>
-                    <td class="accion">
-                        <span routerLink="/home/aprobar/vista"><img src="../assets/pictures/descargar.png" width="25px"></span>
-                    </td>
-                </tr>
-
-                <tr th:each="reporte-proyecto">
-                    <td th:text="id">04</td>
-                    <td th:text="proyecto">proyecto04</td>
-                    <td th:text="participantes_estudiantes">30</td>
-                    <td th:text="participantes_satisfaccion">30</td>
-                    <td th:text="participantes_docentes">5</td>
-                    <td th:text="cantidad_beneficiarios">25</td>
-                    <td th:text="satifaccion_beneficiario">25</td>
-                    <td class="accion">
-                        <span routerLink="/home/aprobar/vista"><img src="../assets/pictures/descargar.png" width="25px"></span>
-                    </td>
-                </tr>
-
-                <tr th:each="reporte-proyecto">
-                    <td th:text="id">05</td>
-                    <td th:text="proyecto">proyecto05</td>
-                    <td th:text="participantes_estudiantes">30</td>
-                    <td th:text="participantes_satisfaccion">30</td>
-                    <td th:text="participantes_docentes">5</td>
-                    <td th:text="cantidad_beneficiarios">25</td>
-                    <td th:text="satifaccion_beneficiario">25</td>
-                    <td class="accion">
-                        <span routerLink="/home/aprobar/vista"><img src="../assets/pictures/descargar.png" width="25px"></span>
-                    </td>
-                </tr>
-
-                <tr th:each="reporte-proyecto">
-                    <td th:text="id">06</td>
-                    <td th:text="proyecto">proyecto06</td>
-                    <td th:text="participantes_estudiantes">30</td>
-                    <td th:text="participantes_satisfaccion">30</td>
-                    <td th:text="participantes_docentes">5</td>
-                    <td th:text="cantidad_beneficiarios">25</td>
-                    <td th:text="satifaccion_beneficiario">25</td>
-                    <td class="accion">
-                        <span routerLink="/home/aprobar/vista"><img src="../assets/pictures/descargar.png" width="25px"></span>
-                    </td>
-                </tr>
-
-                <tr th:each="reporte-proyecto">
-                    <td th:text="id">07</td>
-                    <td th:text="proyecto">proyecto07</td>
-                    <td th:text="participantes_estudiantes">30</td>
-                    <td th:text="participantes_satisfaccion">30</td>
-                    <td th:text="participantes_docentes">5</td>
-                    <td th:text="cantidad_beneficiarios">25</td>
-                    <td th:text="satifaccion_beneficiario">25</td>
+                <tr *ngFor="let reporteproyecto of ReporteProyecto">
+                    <td>{{reporteproyecto.id}}</td>
+                    <td>{{reporteproyecto.informeFinal?.proyecto?.nombre_proyecto}}</td>
+                    <td>{{reporteproyecto.informeFinal?.participantes_estudiantes}}</td>
+                    <td>{{reporteproyecto.informeFinal?.participantes_satisfaccion}}</td>
+                    <td>{{reporteproyecto.informeFinal?.participantes_docente}}</td>
+                    <td>{{reporteproyecto.informeFinal?.cantidad_beneficiarios}}</td>
+                    <td>{{reporteproyecto.informeFinal?.satisfaccion_beneficiarios}}</td>
                     <td class="accion">
                         <span routerLink="/home/aprobar/vista"><img src="../assets/pictures/descargar.png" width="25px"></span>
                     </td>

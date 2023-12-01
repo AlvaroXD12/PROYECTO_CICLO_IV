@@ -8,8 +8,13 @@
     <a href="/menu"><img src="/assets/pictures/regresar.png" class="boton_regresar"></a>
     <p class="documento_intervencion">Informe Final</p>
   </div>
-  <div class="crear_buscar">
 
+  <div class="crear_buscar">
+  <div class="boton_crear">
+    <a [routerLink]="['/home/informefinal/registrar']" class="crear">
+      <p>CREAR</p>
+    </a>
+  </div>
     <div class="buscar">
       <label class="texto_proyecto">Proyecto:</label>
       <select class="select">
@@ -28,33 +33,34 @@
 
     </div>
   </div>
-  <div class="container-tabla">
-  <table class="tabla">
-    <tr>
-      <th class="id">N°</th>
-      <th class="nombre_afiliacion">Proyecto</th>
-      <th class="tipo_afiliacion">Facultad</th>
-      <th class="fecha_inicio">Carrera</th>
-      <th class="fecha_fin">Semestre</th>
-      <th colspan="3" class="acción">Acción</th>
+  <div class="-tabla">
+    <table class="tabla">
+      <thead>
+        <tr>
+          <th class="id">N°</th>
+          <th class="nombre_afiliacion">Proyecto</th>
+          <th class="tipo_afiliacion">Facultad</th>
+          <th class="fecha_inicio">Carrera</th>
+          <th class="fecha_fin">Semestre</th>
+          <th class="acción">Acción</th>
 
 
-    </tr>
-    <tbody>
-      <tr *ngFor="let proyecto of proyectos">
-        <td>{{proyecto.id}}</td>
-        <td>{{proyecto.proyecto?.nombre_proyecto}}</td>
-        <td>{{proyecto.escu_prof?.facultad}}</td>
-        <td>{{proyecto.escu_prof?.carrera}}</td>
-        <td>{{proyecto.parametros?.tipos}}</td>
-        <td class="acción">
-
-         <a [routerLink]="['/home/informefinal/add']"> <img src="/assets/pictures/editar.png" class="editar"></a>
-
-
-        </td>
-      </tr>
-    </tbody>
-  </table></div>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let informefinal of informefinal">
+          <td>{{informefinal.id}}</td>
+          <td>{{informefinal.proyecto?.nombre_proyecto}}</td>
+          <td>{{informefinal.proyecto?.escu_prof?.facultad}}</td>
+          <td>{{informefinal.proyecto?.escu_prof?.carrera}}</td>
+          <td>{{informefinal.proyecto?.parametros?.tipos}}</td>
+          <td class="acción">
+            <img src="/assets/pictures/editar.png" class="editar"
+            [routerLink]="['/home/informefinal/edit', informefinal.id]">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 
 </div>

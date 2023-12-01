@@ -37,13 +37,13 @@ export class DocumentoService {
 
   private url1: string = 'http://localhost:8085/ubigeo';
 
-  listarUbi(): Observable<any> {
-    return this.http.get<Ubigeo>(this.url1 + '/all');
+  listarUbi(): Observable<Ubigeo[]> {
+    return this.http.get<Ubigeo[]>(this.url1 + '/all');
   }
 
   private url2: string = 'http://localhost:8085/parametros';
 
-  listarPar(): Observable<any> {
-    return this.http.get<Parametros>(this.url2 + '/all');
+  listarPar(): Observable<Parametros[]> {
+    return this.http.get<Parametros[]>(this.url2 + '/all');
   }
 }

@@ -16,59 +16,71 @@
                             <p>AGREGAR ACTIVIDAD</p>
                         </div>
                     </div>
-                    <div class="espacio">
-                        <label class="datos">Nombre de la Actividad:</label>
-                        <input type="text" class="form-control" />
-                    </div>
-                    <div class="espacio">
-                        <div class="contener_fechas">
-                            <label class="fecha_inicio1">Fecha inicio:</label>
-                            <input type="date" class="fecha">
+                    <form (ngSubmit)="onSubmit()">
+                        <div class="espacio">
+                            <label class="datos">Nombre de la Actividad:</label>
+                            <input type="text" id="nombre_actividad" [(ngModel)]="actividadplanis.nombre_actividad"
+                                name="nombre_actividad" class="form-control" />
                         </div>
-                        <div class="proyect_tipo">
-                            <label class="fecha_fin">Fecha fin:</label>
-                            <input type="date" class="fecha">
+                        <div class="espacio">
+                            <div class="contener_fechas">
+                                <label class="fecha_inicio1">Fecha inicio:</label>
+                                <input type="date" id="fecha_inicio" [(ngModel)]="actividadplanis.fecha_inicio"
+                                    name="fecha_inicio" class="fecha" />
+                            </div>
+                            <div class="proyect_tipo">
+                                <label class="fecha_fin">Fecha fin:</label>
+                                <input type="date" id="fecha_fin" [(ngModel)]="actividadplanis.fecha_fin"
+                                    name="fecha_fin" class="fecha" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="espacio">
-                        <div class="contener_fechas">
-                            <label class="datos1">Material Insumo:</label>
-                            <input type="text" class="form-control1" />
+                        <div class="espacio">
+                            <div class="contener_fechas">
+                                <label class="datos1">Material Insumo:</label>
+                                <input type="text" id="material_insumo" [(ngModel)]="actividadplanis.material_insumo"
+                                name="material_insumo" class="form-control1" />
+                            </div>
+                            <div class="proyect_tipo">
+                                <label class="fecha_fin">Cantidad:</label>
+                                <input type="text" id="cantidad" [(ngModel)]="actividadplanis.cantidad"
+                                name="cantidad" class="form-control1" />
+                            </div>
                         </div>
-                        <div class="proyect_tipo">
-                            <label class="fecha_fin">Cantidad:</label>
-                            <input type="text" class="form-control1" />
+                        <div class="espacio">
+                            <div class="contener_fechas">
+                                <label class="datos1">Unidad Media:</label>
+                                <input type="text" id="unidad_media" [(ngModel)]="actividadplanis.unidad_media"
+                                name="unidad_media" class="form-control1" />
+                            </div>
+                            <div class="proyect_tipo">
+                                <label class="datos1">Costo Unitario:</label>
+                                <input type="text" id="costo_unitario" [(ngModel)]="actividadplanis.costo_unitario"
+                                name="costo_unitario" class="form-control1" />
+                            </div>
                         </div>
-                    </div>
-                    <div class="espacio">
-                        <div class="contener_fechas">
-                            <label class="datos1">Unidad Media:</label>
-                            <input type="text" class="form-control1" />
+                        <div class="espacio">
+                            <div class="contener_fechas">
+                                <label class="datos1">Costo Parcial:</label>
+                                <input type="text" id="costo_parcial" [(ngModel)]="actividadplanis.costo_parcial"
+                                name="costo_parcial" class="form-control1" />
+                            </div>
+                            <div class="proyect_tipo">
+                                <label class="fecha_fin">Cuenta:</label>
+                                <input type="text" id="cuenta" [(ngModel)]="actividadplanis.cuenta"
+                                name="cuenta" class="form-control1" />
+                            </div>
                         </div>
-                        <div class="proyect_tipo">
-                            <label class="datos1">Costo Unitario:</label>
-                            <input type="text" class="form-control1" />
+                        <div class="espacio">
+                            <label class="datos2">Responsable:</label>
+                            <input type="text" id="responsable" [(ngModel)]="actividadplanis.responsable"
+                                name="responsable" class="form-control" />
                         </div>
-                    </div>
-                    <div class="espacio">
-                        <div class="contener_fechas">
-                            <label class="datos1">Costo Parcial:</label>
-                            <input type="text" class="form-control1" />
-                        </div>
-                        <div class="proyect_tipo">
-                            <label class="fecha_fin">Cuenta:</label>
-                            <input type="text" class="form-control1" />
-                        </div>
-                    </div>
-                    <div class="espacio">
-                        <label class="datos2">Responsable:</label>
-                        <input type="text" class="form-control" />
-                    </div>
-                    <div class="boton_crear1">
-                        <a href="/home/proyecto" class="crear1">
-                            <p>GUARDAR</p>
-                        </a>
-                    </div>
+                        <button class="boton_crear1">
+                            <a class="crear1">
+                                <p>GUARDAR</p>
+                            </a>
+                        </button>
+                    </form>
                 </div>
             </div>
             <div class="linea_separa"></div>
@@ -94,17 +106,21 @@
                             <td>{{actividad_plani.fecha_fin}}</td>
                             <td>{{actividad_plani.costo_parcial}}</td>
                             <td>{{actividad_plani.responsable}}</td>
-                            
+
                             <td class="acción">
                                 <a><img src="/assets/pictures/ver1.png" class="descargar"></a>
-                                <a><img src="/assets/pictures/editar1.png" class="descargar"></a>
-                                <a><img src="/assets/pictures/borrar.png" class="descargar"></a>
+                                <a><img src="/assets/pictures/editar1.png"
+                                        (click)="actividad_plani.id && Editar(actividad_plani.id)"
+                                        class="descargar"></a>
+                                <a><img src="/assets/pictures/borrar.png"
+                                        (click)="actividad_plani.id && Eliminar(actividad_plani.id)"
+                                        class="descargar"></a>
                             </td>
                         </tr>
                     </tbody>
                 </table>
             </div>
-            
+
         </div>
     </div>
 </div>

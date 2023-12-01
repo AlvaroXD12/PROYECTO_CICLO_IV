@@ -67,7 +67,6 @@
 }
 
 .crear {
-
   color: #014277;
   font-family: Comic Neue;
   font-size: 15px;
@@ -77,7 +76,6 @@
   text-align: center;
 }
 .crear1 {
-
   color: #014277;
   font-family: Comic Neue;
   font-size: 15px;
@@ -107,7 +105,6 @@ border-radius: 3px;
   margin-bottom: 10px;
 }
 .datos {
-
   font-family: Comic Neue;
   font-size: 15px;
   font-style: normal;
@@ -190,16 +187,7 @@ border-radius: 3px;
 
 }
 
-.buscar {
-  padding-top: 8px;
-  margin-top: 20px;
-  margin-left: 27px;
-  width: 1145px;
-  height: 34px;
-  border-radius: 10px;
-  background: rgba(163, 163, 163, 0.37);
 
-}
 
 .filtros {
   margin-left: 10px;
@@ -285,7 +273,6 @@ td {
 }
 .contener_doc1 {
   margin-top: 15px;
-
   width: 530px;
   height: 149px;
   border-radius: 15px;
@@ -343,10 +330,7 @@ td {
   border: none;
 }
 
-.id {
-  width: 10px;
-  text-align: center;
-}
+
 
 .nombre_documento {
   width: 340px;
@@ -376,7 +360,6 @@ td {
   line-height: normal;
   width: 100px;
   text-align: center;
-
 }
 
 .semestre {
@@ -384,12 +367,7 @@ td {
   text-align: center;
 }
 
-.acción {
-  width: 50px;
-  text-align: center;
-  align-items: center;
-  text-align: center;
-}
+
 
 .borrar {
   margin-right: 10px;
@@ -406,74 +384,19 @@ td {
   font-family: Comic Neue;
   font-size: 15px;
   font-style: normal;
-
-
-}
-
-.estilo_caja {
-
-  border-radius: 7px;
-  border-width: 1.7px;
-  font-family: 'Comic Neue';
-  font-size: 14px;
-  font-style: normal;
-  outline: none;
-  width: 120px;
-  height: 20px;
-  text-align: center;
-  border-color:#014277;
-  border-style:solid;
-}
-
-.caja_buscar1{
-  border-radius: 7px;
-  border-width: 1.7px;
-  font-family: 'Comic Neue';
-  font-size: 14px;
-  font-style: normal;
-  outline: none;
-  width: 189px;
-  height: 23px;
-  text-align: center;
-  border-color:#014277;
-  border-style:solid;
-}
-
-.caja_buscar2{
-  border-radius: 7px;
-  border-width: 1.7px;
-  font-family: 'Comic Neue';
-  font-size: 14px;
-  font-style: normal;
-  outline: none;
-  width: 170px;
-  height: 23px;
-  text-align: center;
-  border-color:#014277;
-  border-style:solid;
 }
 
 .caja_buscar{
   border-radius: 7px;
-  border-width: 1.7px;
   font-family: 'Comic Neue';
   font-size: 14px;
   font-style: normal;
   outline: none;
-  width: 150px;
+  width: 895px;
   height: 23px;
   text-align: center;
-  border-color:#014277;
+  border: 2px solid #014277;
   border-style:solid;
-}
-
-.descargar{
-  width: 27px;
-  height: 27px;
-  padding-left: 10px;
-  align-items: center;
-  text-align: center;
-  margin-right: 10px;
 }
 
 .proyect_tipo {
@@ -487,7 +410,7 @@ td {
   max-height: 410px;
   width: 1145px;
   overflow-y: auto;
- border: 4px solid #F7A800;
+  border: 4px solid #F7A800;
 }
 
 .tabla {
@@ -499,4 +422,110 @@ td {
   background-color: #014277;
   border-collapse: collapse;
   overflow-y: auto
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.buscador {
+  padding-top: 8px;
+  margin-left: 27px;
+  width: 1000px;
+  height: 34px;
+  border-radius: 10px;
+  background: rgba(163, 163, 163, 0.37);
+}
+
+.contenedor_de_buscar{
+  display: flex;
+}
+
+.add {
+  width: 143px;
+  height: 40px;
+  margin-left: 10px;
+  display: flex;
+  background-color: #F7A800;
+  border: none;
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
+  padding-left: 50px;
+  font-family: 'Comic Neue';
+  font-size: 17px;
+  font-style: normal;
+  color: #014277;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+  .integrantes{
+    width: 100px;
+    text-align: center;
+  }
+
+.actividades{
+  width: 100px;
+  text-align: center;
+}
+
+.acción {
+  width: 120px;
+  text-align: center;
+  align-items: center;
+}
+
+.id {
+  width: 10px;
+  text-align: center;
+}
+
+
+.borrar {
+  width: 25px;
+}
+
+.editar {
+  width: 23px;
+}
+
+.ver{
+  width: 25px;
+  margin-top: 2px;
+  margin-right: 9px;
+  margin-left: 8px;
+}
+
+.seleccionador1 {
+  border-radius: 6px;
+  border: 2px solid #014277;
+  width: 250px;
+  height: 27px;
+}
+
+.seleccionador2 {
+  border-radius: 6px;
+  border: 2px solid #014277;
+  width: 100px;
+  height: 27px;
+}
+
+.seleccionador3 {
+  border-radius: 6px;
+  border: 2px solid #014277;
+  width: 360px;
+  height: 27px;
+}
+
+.input {
+  border-radius: 6px;
+  border: 2px solid #014277;
+  width: 485px;
+  height: 24px;
 }

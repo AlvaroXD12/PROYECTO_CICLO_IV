@@ -1,0 +1,150 @@
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;800&family=Squada+One&display=swap"
+  rel="stylesheet">
+
+<div class="borde">
+  <div class="regresar">
+    <a [routerLink]="['/home/validacionevidencia']"><img src="/assets/pictures/regresar.png" class="boton_regresar"></a>
+    <p class="titulo">Validar evidencia</p>
+  </div>
+
+  <div class="contenedor_grupos">
+    <div class="contenedor_grupo">
+      <div class="grupo">
+
+        <div class="actividadx">Grupo 01</div>
+      </div>
+      <div>
+        <div class="actividad">
+          <div class="actividad1">Actividad:</div>
+        </div>
+        <select class="seleccionador">
+          <option></option>
+          <option>Manos a la Obra</option>
+          <option>Ora del Codigo</option>
+          <option>AutoStop</option>
+        </select>
+        <table class="tabla">
+          <tbody>
+            <tr *ngFor="let evidencia  of evidencia ">
+              <td>{{evidencia.integrantes?.curso_arti_estu?.curso_alumno?.alumno?.persona?.nombre}}</td>
+              <td>{{evidencia.integrantes?.roles?.funcion}}</td>
+              <td class="porcentaje">{{evidencia.porcentaje}}</td>
+              <td>{{evidencia.integrantes?.roles?.horas}}</td>
+              <td>{{evidencia.integrantes?.roles?.nota}}</td>
+              <td class="estado">{{evidencia.integrantes?.roles?.parametros?.estado}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <a><button mat-raised-button color="primary" (click)="openDialog()" class="integrantes">Informe</button></a>
+      <div>
+
+      </div>
+    </div>
+    <div class="contenedor_grupo">
+      <div class="grupo">
+        <div class="actividadx">Grupo 02</div>
+      </div>
+      <div>
+        <div class="actividad">
+          <div class="actividad1">Actividad:</div>
+        </div>
+        <select class="seleccionador">
+          <option></option>
+          <option>Manos a la Obra</option>
+          <option>Ora del Codigo</option>
+          <option>AutoStop</option>
+        </select>
+        <table class="tabla">
+          <tbody>
+            <tr *ngFor="let evidencia  of evidencia ">
+              <td>{{evidencia.integrantes?.curso_arti_estu?.curso_alumno?.alumno?.persona?.nombre}}</td>
+              <td>{{evidencia.integrantes?.roles?.funcion}}</td>
+              <td class="porcentaje">{{evidencia.porcentaje}}</td>
+              <td>{{evidencia.integrantes?.roles?.horas}}</td>
+              <td>{{evidencia.integrantes?.roles?.nota}}</td>
+              <td class="estado">{{evidencia.integrantes?.roles?.parametros?.estado}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <a><button mat-raised-button color="primary" (click)="openDialog()" class="integrantes">Informe</button></a>
+
+    </div>
+
+
+    <div class="contenedor_grupo">
+      <div class="grupo">
+
+        <div class="actividadx">Grupo 03</div>
+
+      </div>
+      <div>
+        <div class="actividad">
+
+          <div class="actividad1">Actividad:</div>
+        </div>
+        <select class="seleccionador">
+          <option></option>
+          <option>Manos a la Obra</option>
+          <option>Ora del Codigo</option>
+          <option>AutoStop</option>
+        </select>
+        <table class="tabla">
+          <tbody>
+            <tr *ngFor="let evidencia  of evidencia ">
+              <td>{{evidencia.integrantes?.curso_arti_estu?.curso_alumno?.alumno?.persona?.nombre}}</td>
+              <td>{{evidencia.integrantes?.roles?.funcion}}</td>
+              <td class="porcentaje">{{evidencia.porcentaje}}</td>
+              <td>{{evidencia.integrantes?.roles?.horas}}</td>
+              <td>{{evidencia.integrantes?.roles?.nota}}</td>
+              <td class="estado">{{evidencia.integrantes?.roles?.parametros?.estado}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <a><button mat-raised-button color="primary" (click)="openDialog()" class="integrantes">Informe</button></a>
+    </div>
+    <div class="contenedor_grupo">
+      <div class="grupo">
+        <div class="actividadx">Grupo 04</div>
+      </div>
+      <div>
+        <div class="actividad">
+          <div class="actividad1">Actividad:</div>
+        </div>
+        <select class="seleccionador">
+          <option></option>
+          <option>Manos a la Obra</option>
+          <option>Ora del Codigo</option>
+          <option>AutoStop</option>
+        </select>
+        <table class="tabla">
+          <tbody>
+            <tr *ngFor="let evidencia  of evidencia ">
+              <td>{{evidencia.integrantes?.curso_arti_estu?.curso_alumno?.alumno?.persona?.nombre}}</td>
+              <td>{{evidencia.integrantes?.roles?.funcion}}</td>
+              <td class="porcentaje">{{evidencia.porcentaje}}</td>
+              <td>{{evidencia.integrantes?.roles?.horas}}</td>
+              <td>{{evidencia.integrantes?.roles?.nota}}</td>
+              <td class="estado">{{evidencia.integrantes?.roles?.parametros?.estado}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <a><button mat-raised-button color="primary" (click)="openDialog()" class="integrantes">Informe</button></a>
+    </div>
+    <a>
+      <button mat-raised-button color="primary" [routerLink]="['/home/validacionevidencia']"class="guardar">Guardar</button>
+    </a>
+  </div>
+  <div>
+
+  </div>
+
+</div>

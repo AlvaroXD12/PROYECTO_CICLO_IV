@@ -35,8 +35,8 @@
                             </div>
                         </div>
                         <div class="espacio">
-                            <label class="texto_buscar">Tipo de Actividad:</label>
-                            <select class="tipo_doc" id="parametros" [(ngModel)]="actividadejecuc.parametros"
+                            <label class="datos3">Tipo de Actividad:</label>
+                            <select class="caja_buscar " id="parametros" [(ngModel)]="actividadejecuc.parametros"
                                 name="parametros">
                                 <option *ngFor="let par of parametros" [ngValue]="par">{{par.valor}}</option>
                             </select>
@@ -72,16 +72,17 @@
                     </thead>
                     <tbody>
                         <tr *ngFor="let actividad_ejecu of actividadejecu">
-                            <td>{{actividad_ejecu.id}}</td>
+                            <td>{{actividad_ejecu.idp}}</td>
                             <td>{{actividad_ejecu.nombre_actividad}}</td>
                             <td>{{actividad_ejecu.fecha_inicio}}</td>
                             <td>{{actividad_ejecu.fecha_fin}}</td>
                             <td>{{actividad_ejecu.parametros?.valor}}</td>
                             <td class="acción">
                                 <a><img src="/assets/pictures/ver1.png" class="descargar"></a>
-                                <a><img src="/assets/pictures/editar1.png" class="descargar"></a>
+                                <a><img src="/assets/pictures/editar1.png" class="descargar"
+                                        (click)="actividad_ejecu.idp && Editar(actividad_ejecu.idp)"></a>
                                 <a><img src="/assets/pictures/borrar.png" class="descargar"
-                                        (click)="actividad_ejecu.id && Eliminar(actividad_ejecu.id)"></a>
+                                        (click)="actividad_ejecu.idp && Eliminar(actividad_ejecu.idp)"></a>
                             </td>
                         </tr>
                     </tbody>

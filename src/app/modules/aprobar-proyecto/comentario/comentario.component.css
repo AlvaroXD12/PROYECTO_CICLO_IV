@@ -134,3 +134,7 @@ fill: #000;
   font-size: 16px;
   margin-bottom: 3px;
  }
+ 
+ a {
+  text-decoration: none;
+}

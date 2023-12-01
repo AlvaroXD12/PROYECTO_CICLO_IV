@@ -16,6 +16,7 @@ import { Parametros } from 'src/app/models/Parametros';
 import { ParametrosService } from '../../services/parametros.service';
 import { Ciclo } from 'src/app/models/Ciclo';
 import { CicloService } from '../../services/ciclo.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-editar-proyecto',
@@ -52,6 +53,7 @@ export class EditarProyectoComponent implements OnInit{
     this.ListarEscuela()
     this.ListarParametros()
     this.ListarCiclo()
+    this.aparecer()
     
   }
   onSubmit() {
@@ -94,7 +96,7 @@ export class EditarProyectoComponent implements OnInit{
   }
   ListarParametros() {
     this.parametrosService.listar().subscribe(data => {
-      this.parametros = data;  
+      this.parametros = data.filter(parametro => parametro.id === 8 || parametro.id === 9);  
     });
   }
   ListarCiclo() {
@@ -106,11 +108,63 @@ export class EditarProyectoComponent implements OnInit{
     this.proyectoService.crear(this.proyecto).subscribe(data => {
       console.log(data);
       this.irProyecto();
+      this.showModal();
     });
   }
   irProyecto(){
     this.router.navigate(["/home/proyecto"]);
   }
-
+  aparecer() {
+    this.route.params.subscribe(params => {
+      const id = params['id'];
+      console.log(id);
+  
+      this.proyectoService.IDproyecto(id).subscribe(data => {
+        this.proyecto = data;
+  
+        const cor = this.coordinador.find(cor => cor.id === this.proyecto.coordinador?.id);
+        if (cor) {
+          this.proyecto.coordinador = cor;
+        } 
+        const tip = this.tipproyec.find(tip => tip.id === this.proyecto.tip_proyec?.id);
+        if (tip) {
+          this.proyecto.tip_proyec = tip;
+        }
+        const mod = this.modalidad.find(mod => mod.id === this.proyecto.modalidad?.id);
+        if (mod) {
+          this.proyecto.modalidad = mod;
+        } 
+        const doc = this.documento.find(doc => doc.id === this.proyecto.documento?.id);
+        if (doc) {
+          this.proyecto.documento = doc;
+        } 
+        const esc = this.escuprof.find(esc => esc.id === this.proyecto.escu_prof?.id);
+        if (esc) {
+          this.proyecto.escu_prof = esc;
+        } 
+        const par = this.parametros.find(par => par.id === this.proyecto.parametros?.id);
+        if (par) {
+          this.proyecto.parametros = par;
+        }
+        const cic = this.ciclo.find(cic => cic.id === this.proyecto.ciclo?.id);
+        if (cic) {
+          this.proyecto.ciclo = cic;
+        }
+      });
+    });
+  }
+  showModal(){
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: "Guardado exitosamente",
+      showConfirmButton: false,
+      timer: 1500,
+      customClass: {
+        popup: 'my-popup-class',
+      }
+    });
+    
+  }
 
 }

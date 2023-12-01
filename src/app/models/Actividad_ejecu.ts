@@ -2,7 +2,7 @@ import { Parametros } from "./Parametros";
 import { Proyecto } from "./Proyecto";
 
 export class Actividad_ejecu {
-    id?: number;
+    idp?: number;
     nombre_actividad?: string;
     fecha_inicio?: Date;
     fecha_fin?: Date;

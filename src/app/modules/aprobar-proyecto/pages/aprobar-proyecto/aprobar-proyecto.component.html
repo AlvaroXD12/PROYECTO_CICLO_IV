@@ -1,3 +1,10 @@
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+<link href="https://fonts.googleapis.com/css2?family=Squada+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;800&family=Squada+One&display=swap"
+    rel="stylesheet">
+
 <div class="contenedor">
     <div class="borde">
         <div class="encabezado">
@@ -48,78 +55,20 @@
                 <th class="estado">Estado</th>
                 <th class="accion">Acción</th>
             </thead>
+
             <tbody>
-                <tr th:each="contenido">
-                    <td th:text="id">01</td>
-                    <td th:text="nombre_afiliacion">Afiliacion01</td>
-                    <td th:text="tipo_proyecto">ProyectoTipo01</td>
-                    <td th:text="nro_acuerdo">20231015</td>
-                    <td th:text="estado"><img class="estadoimg" src="../assets/pictures/Enproceso.png"></td>
+                <tr *ngFor="let proyecto of proyecto">
+                    <td>{{proyecto.id}}</td>
+                    <td>{{proyecto.nombre_proyecto}}</td>
+                    <td>{{proyecto.tip_proyec?.nombre_tipro}}</td>
+                    <td>{{proyecto.nacuerdo}}</td>
+                    <td><img class="estadoimg" src="../assets/pictures/validadofond.png"></td>
                     <td class="accion">
-                        <span routerLink="/home/aprobar/vista" class="material-symbols-outlined" >visibility</span>
-                        <span routerLink="/home/aprobar/comentar" class="material-symbols-outlined" >chat</span>
+                        <span class="material-symbols-outlined" >visibility</span>
+                        <span [routerLink]="['/home/aprobar/comentar', proyecto.id]" class="material-symbols-outlined" >chat</span>
                     </td>
                 </tr>
 
-                <tr th:each="contenido">
-                    <td th:text="id">02</td>
-                    <td th:text="nombre_afiliacion">Afiliacion02</td>
-                    <td th:text="tipo_proyecto">ProyectoTipo02</td>
-                    <td th:text="nro_acuerdo">20231542</td>
-                    <td th:text="estado"><img class="estadoimg" src="../assets/pictures/validadofond.png"></td>
-                    <td class="accion">
-                        <span routerLink="/home/aprobar/vista" class="material-symbols-outlined" >visibility</span>
-                        <span routerLink="/home/aprobar/comentar" class="material-symbols-outlined" >chat</span>
-                    </td>
-                </tr>
-
-                <tr th:each="contenido">
-                    <td th:text="id">03</td>
-                    <td th:text="nombre_afiliacion">Afiliacion03</td>
-                    <td th:text="tipo_proyecto">ProyectoTipo03</td>
-                    <td th:text="nro_acuerdo">20237854</td>
-                    <td th:text="estado"><img class="estadoimg" src="../assets/pictures/validadofond.png"></td>
-                    <td class="accion">
-                        <span routerLink="/home/aprobar/vista" class="material-symbols-outlined" >visibility</span>
-                        <span routerLink="/home/aprobar/comentar" class="material-symbols-outlined" >chat</span>
-                    </td>
-                </tr>
-
-                <tr th:each="contenido">
-                    <td th:text="id">04</td>
-                    <td th:text="nombre_afiliacion">Afiliacion04</td>
-                    <td th:text="tipo_proyecto">ProyectoTipo04</td>
-                    <td th:text="nro_acuerdo">20239562</td>
-                    <td th:text="estado"><img class="estadoimg" src="../assets/pictures/validadofond.png"></td>
-                    <td class="accion">
-                        <span routerLink="/home/aprobar/vista" class="material-symbols-outlined" >visibility</span>
-                        <span routerLink="/home/aprobar/comentar" class="material-symbols-outlined" >chat</span>
-                    </td>
-                </tr>
-
-                <tr th:each="contenido">
-                    <td th:text="id">05</td>
-                    <td th:text="nombre_afiliacion">Afiliacion05</td>
-                    <td th:text="tipo_proyecto">ProyectoTipo05</td>
-                    <td th:text="nro_acuerdo">20233625</td>
-                    <td th:text="estado"><img class="estadoimg" src="../assets/pictures/validadofond.png"></td>
-                    <td class="accion">
-                        <span routerLink="/home/aprobar/vista" class="material-symbols-outlined" >visibility</span>
-                        <span routerLink="/home/aprobar/comentar" class="material-symbols-outlined" >chat</span>
-                    </td>
-                </tr>
-
-                <tr th:each="contenido">
-                    <td th:text="id">06</td>
-                    <td th:text="nombre_afiliacion">Afiliacion06</td>
-                    <td th:text="tipo_proyecto">ProyectoTipo06</td>
-                    <td th:text="nro_acuerdo">20235642</td>
-                    <td th:text="estado"><img class="estadoimg" src="../assets/pictures/validadofond.png"></td>
-                    <td class="accion">
-                        <span routerLink="/home/aprobar/vista" class="material-symbols-outlined" >visibility</span>
-                        <span routerLink="/home/aprobar/comentar" class="material-symbols-outlined" >chat</span>
-                    </td>
-                </tr>
             </tbody>
             </table>
     </div>

@@ -17,20 +17,20 @@ export class ActividadEjecuService {
     return this.http.get<Actividad_ejecu[]>(this.url + '/all');
   }
 
-  crear(actividadejecu: Actividad_ejecu){
-    return this.http.post<string>(this.url +'/add' , actividadejecu);
+  crear(actividad_ejecu: Actividad_ejecu): Observable<Object>{
+    return this.http.post<Actividad_ejecu>(this.url +'/add' , actividad_ejecu);
   }
 
-  editar(actividadejecu: Actividad_ejecu) {
-    return this.http.put(this.url, actividadejecu);
+  editar(idp: number, actividad_ejecu: Actividad_ejecu) : Observable<Object>{
+    return this.http.put(this.url + '/edit/' + idp, actividad_ejecu);
   }
   
-  eliminar(id: number): Observable<any> {
-    return this.http.delete(this.url + '/delete/' + id);
+  eliminar(idp: number): Observable<any> {
+    return this.http.delete(this.url + '/delete/' + idp);
   }
 
-  IDactividadejecu(id: Actividad_ejecu) {
-    this.http.get(this.url + '/' + id);
+  IDactividadejecu(idp: number): Observable<any> {
+    return this.http.get<Actividad_ejecu>(this.url + '/' + idp);
   }
   obtenerActividadesPorProyecto(id: number): Observable<Actividad_ejecu[]> {
     return this.http.get<Actividad_ejecu[]>(this.url +'/'+  id + '/actividades');

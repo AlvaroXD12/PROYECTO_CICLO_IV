@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ValidacionEvidenciaComponent } from './pages/validacion-evidencia/validacion-evidencia.component';
+import { ValidacionEvidenciaComponent } from './pages/validacionevidencia/validacionevidencia.component';
 
 const routes: Routes = [
   {
